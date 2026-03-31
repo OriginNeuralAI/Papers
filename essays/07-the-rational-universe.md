@@ -8,9 +8,13 @@
 
 ---
 
-What if the universe runs on fractions?
+In the 6th century BC, the Pythagoreans believed that "all is number" — that the universe, at its deepest level, is mathematical. They were so committed to this idea that when Hippasus proved √2 is irrational (not a ratio of integers), they reportedly drowned him. The existence of irrational numbers threatened their worldview: if the universe is made of numbers, and some numbers can't be expressed as fractions, then reality is messier than they wanted.
 
-Not irrational numbers. Not transcendental constants requiring infinite decimal places. Simple ratios of small integers, all derived from one partition:
+Twenty-six centuries later, physics is dominated by constants that appear to be irrational — or at least, no one knows whether they are rational. The fine structure constant α ≈ 1/137.036 has been measured to twelve digits. Is it rational? Nobody knows. Is there a formula? Nobody has one that works.
+
+What if the Pythagoreans were right all along?
+
+What if the universe runs on fractions? Not irrational numbers. Not transcendental constants requiring infinite decimal places. Simple ratios of small integers, all derived from one partition:
 
 **23 = 9 + 7 + 1 + 6**
 
@@ -43,9 +47,9 @@ We spent an entire session building an adversarial falsification suite — six i
 
 **Genuinely strong (structural derivations):**
 
-- **α_s = 7/(3λ_M):** The number 7 is the 1-loop QCD beta function coefficient b₀ for SU(3) with 6 quark flavors. This is a known quantity in particle physics (it governs asymptotic freedom). It equals the Perception basin size. The formula then says: coupling = beta coefficient / (non-singlet basins × Monster scale). This is a derivation, not a fit.
+- **α_s = 7/(3λ_M):** The number 7 is the 1-loop QCD beta function coefficient b₀ for SU(3) with 6 quark flavors. This is one of the most important numbers in particle physics — it determines the rate at which the strong force weakens at high energies (asymptotic freedom), the discovery that earned David Gross, Frank Wilczek, and David Politzer the 2004 Nobel Prize. Gross and Wilczek computed b₀ from Feynman diagrams in 1973; Politzer independently obtained the same result. The fact that b₀ = 7 — and not some other number — determines why quarks are confined inside protons and why the strong force behaves so differently from electromagnetism. This number equals the Perception basin size. The formula says: coupling = beta coefficient / (non-singlet basins × Monster scale). This is a derivation, not a fit.
 
-- **Koide = 6/9 = 2/3:** The Koide parameter is the isotropy index of the lepton mass matrix. K = 2/3 means the mass matrix is maximally democratic — equal coupling to all generations. This IS the equivalence principle (gravity couples equally to all matter) expressed as a basin ratio. The connection goes: equivalence principle → democratic coupling → isotropy index = 2/3 → basin ratio 6/9.
+- **Koide = 6/9 = 2/3:** In 1982, Yoshio Koide — a Japanese physicist working largely outside the mainstream — noticed that the electron, muon, and tau masses satisfy a remarkable relation: (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² = 2/3 to five significant figures. The relation has been called "the most remarkable unexplained formula in particle physics" by Robert Foot (1994) and has survived every improvement in lepton mass measurements for over 40 years. Nobody has explained why it works. The basin ratio 6/9 = 2/3 provides the first structural derivation: the Koide parameter is the isotropy index of the mass matrix, and 2/3 = gravity/strong basin ratio = the equivalence principle (gravity couples democratically to all matter) expressed in basin arithmetic.
 
 - **w = −5/6:** This is a theorem. The index [S₄:V₄] = 6 is the ratio of group orders. w = −(6−1)/6 = −5/6 follows from algebra. No physics was used in the derivation.
 
@@ -109,7 +113,9 @@ The universe may not run on fractions. The Reeds endomorphism may be a remarkabl
 
 If it is a coincidence, it is the most elaborate coincidence in the history of mathematics.
 
-If it is not, then the universe is simpler than anyone imagined: four basins, four forces, and everything else is counting.
+If it is not, then the Pythagoreans were right — drowned Hippasus and all. The universe IS number. The numbers are fractions. The fractions come from a partition. And the partition was written in a cipher table in 1583 by a man who thought he was talking to angels.
+
+Four basins. Four forces. Everything else is counting.
 
 $$23 = 9 + 7 + 1 + 6$$
 

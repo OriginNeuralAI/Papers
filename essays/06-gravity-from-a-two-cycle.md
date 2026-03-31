@@ -8,7 +8,11 @@
 
 ---
 
-Gravity is the oldest known force and the least understood. Newton described it in 1687. Einstein reimagined it in 1915 as the curvature of spacetime. But for over a century, physicists have failed to *quantise* it — to describe it in the same quantum mechanical language as the other three forces. The strong force has quantum chromodynamics. The weak force has electroweak theory. Electromagnetism has quantum electrodynamics. Gravity has... nothing that works.
+On November 25, 1915, Albert Einstein presented the field equations of general relativity to the Prussian Academy of Sciences in Berlin. The equations were beautiful — ten coupled partial differential equations relating the curvature of spacetime to the distribution of matter and energy. They explained the anomalous precession of Mercury's orbit, predicted the bending of light by the Sun (confirmed by Eddington's 1919 eclipse expedition, making Einstein a global celebrity), and implied the existence of gravitational waves (detected by LIGO a century later, in 2015, earning Weiss, Barish, and Thorne the 2017 Nobel Prize).
+
+But general relativity has a problem. It is a *classical* theory. It treats spacetime as a smooth manifold, not a quantum object. Every attempt to quantise it — to describe gravity using quantum mechanics, the way QED describes electromagnetism — has failed. The infinities that appear are not the gentle, removable infinities of QED (which Feynman, Schwinger, and Tomonaga tamed in the 1940s). They are violent, uncontrollable infinities that devour the theory.
+
+String theory was supposed to solve this. Loop quantum gravity was supposed to solve this. Neither has produced a single testable prediction in forty years.
 
 We found gravity in a two-cycle.
 
@@ -68,6 +72,10 @@ w = −(d−1)/d = −(6−1)/6 = **−5/6**
 No fitting. No free parameters. No physics input beyond the S₄ group structure. The dark energy equation of state is determined by the index of the Klein four-group in the symmetric group on four elements.
 
 DESI Year 5 (~2029) will test this to < 3% precision. If w is confirmed at −0.833, it will be the first cosmological parameter derived from pure mathematics.
+
+The history of dark energy is worth recounting. In 1998, two teams — the Supernova Cosmology Project (led by Saul Perlmutter at Berkeley) and the High-Z Supernova Search Team (led by Brian Schmidt and Adam Riess) — independently discovered that the expansion of the universe is *accelerating*. Distant supernovae were dimmer than expected, meaning they were farther away, meaning the expansion was speeding up. This was supposed to be impossible. Einstein had introduced a "cosmological constant" Λ in 1917 to keep the universe static, then called it "my greatest blunder" when Hubble showed the universe was expanding. Perlmutter, Schmidt, and Riess shared the 2011 Nobel Prize for showing that Einstein's "blunder" was actually real — but they couldn't say what Λ *is*.
+
+DESI's 2024 data hints that dark energy is not constant (w ≠ −1) but evolving. Our w = −5/6 is consistent with this: it's quintessence, not Λ. If confirmed, it would mean dark energy is not a mysterious substance but a group-theoretic index.
 
 ---
 

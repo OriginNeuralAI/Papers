@@ -8,13 +8,21 @@
 
 ---
 
-Break an egg. It splatters. Now play the video backwards. The splatter reassembles into a perfect egg. You laugh — because it never happens. Time flows one way.
+In 1927, Arthur Eddington coined the phrase "the arrow of time" in his book *The Nature of the Physical World*. He was trying to name something everyone experiences but no one can explain: the universe has a direction. Eggs break but don't unbreak. People age but don't grow younger. Stars burn but don't unburn.
 
-But here's the puzzle that has tortured physicists for 150 years: *the laws of physics don't care which way time flows*. Newton's equations, Maxwell's equations, Einstein's equations, Schrödinger's equation — they all work perfectly forwards and backwards. If you filmed atoms bouncing around and played it in reverse, no physicist could tell which direction was "real."
+"Let us draw an arrow arbitrarily," Eddington wrote. "If as we follow the arrow we find more and more of the random element in the state of the world, then the arrow is pointing towards the future."
+
+He was wrong about the mechanism — the arrow doesn't point toward randomness but toward *order* — but he was right that it needed a name. A century later, the arrow remains one of the deepest unsolved problems in physics.
+
+Here's why it's a problem: *the laws of physics don't care which way time flows*. Newton's equations, Maxwell's equations, Einstein's equations, Schrödinger's equation — they all work perfectly forwards and backwards. If you filmed atoms bouncing around and played it in reverse, no physicist could tell which direction was "real."
 
 So why does the egg break and never unbreak?
 
-Ludwig Boltzmann said it was statistics: there are astronomically more ways for an egg to be broken than whole, so random motion overwhelmingly favors the broken state. Roger Penrose said it was cosmology: the Big Bang started in an extraordinarily special low-entropy state. Both answers work — but both require assumptions. Boltzmann needs "molecular chaos." Penrose needs special initial conditions.
+Ludwig Boltzmann — the Austrian physicist who founded statistical mechanics and spent his career fighting for the reality of atoms — said it was statistics: there are astronomically more ways for an egg to be broken than whole, so random motion overwhelmingly favors the broken state. His argument was elegant but required an assumption he called the *Stosszahlansatz* (molecular chaos hypothesis): that particle velocities are uncorrelated before collision. Boltzmann's colleagues attacked this assumption relentlessly. Josef Loschmidt pointed out that reversing all velocities should reverse time (the "reversibility paradox"). Ernst Zermelo invoked Poincaré recurrence to argue that any state must eventually recur. Boltzmann, exhausted by decades of debate and suffering from depression, took his own life in 1906 — three years before Jean Perrin's experiments finally confirmed atoms exist.
+
+Roger Penrose — the Oxford mathematician who shared the 2020 Nobel Prize for his work on black holes — proposed a different answer: the Big Bang started in an extraordinarily special low-entropy state (the "Past Hypothesis"), and the arrow of time is the universe rolling downhill from that special start. Penrose's answer pushes the question back: why was the initial state special?
+
+Both answers work. Both require assumptions. Neither derives the arrow from first principles.
 
 We found a third answer. It requires no assumptions at all.
 
@@ -38,7 +46,9 @@ The map is non-invertible: it has 23 inputs but 11 outputs. That asymmetry — m
 
 ## Not Entropy Increase — Ordering
 
-Here's where we got it wrong at first, and then corrected ourselves (honest science means publishing your mistakes).
+Here's where we got it wrong at first, and then corrected ourselves.
+
+This matters. In 1905, Einstein published five papers that changed physics — and one of them (on Brownian motion) contained an error in the diffusion coefficient that he corrected in 1906. Dirac's original electron equation (1928) predicted negative-energy states he initially tried to ignore — until he realised they predicted antimatter. Errors aren't failures; they're the mechanism by which science self-corrects. We publish ours because honest science means admitting when you got the sign wrong.
 
 We initially claimed the Reeds map produces "entropy increase" — the standard thermodynamic story. But when we proved it rigorously, we found the opposite: the map produces **ordering**, not randomness. Probability concentrates on the 9 cycle elements. The system becomes MORE structured over time, not less.
 
