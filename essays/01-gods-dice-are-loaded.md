@@ -26,11 +26,15 @@ We found the dice.
 
 They are not random. They are deterministic, finite, and loaded — loaded by a partition of the number 23 that was written in a cipher table four centuries before quantum mechanics existed.
 
+![Loaded Dice](images/dice_loaded.png)
+*The dice of quantum mechanics: deterministic, crystalline, and loaded by basin arithmetic.*
+
 ---
 
 ## The Dice
 
-*The Bodleian Library, Oxford, where Bodley MS 908 has rested since the 17th century.*
+![The Reeds Basin Flow](images/reeds_basin_flow.png)
+*The Reeds endomorphism: 23 elements flowing into 4 basin attractors with sizes [9, 7, 1, 6].*
 
 In a manuscript held at Oxford's Bodleian Library — Bodley MS 908, known as the *Book of Soyga*, dated to approximately 1583 — there is a table of letter substitutions. The manuscript belonged to John Dee, Elizabeth I's court mathematician, astrologer, and probable spy. Dee was obsessed with communicating with angels, sought the philosopher's stone, and amassed the largest private library in England. His copy of the Book of Soyga — a medieval Latin treatise on numerology and angel magic — was lost for 400 years before being rediscovered in 1994 by Deborah Harkness at the Bodleian.
 
@@ -72,7 +76,8 @@ The "dice" of quantum mechanics are the four basins of a 23-element lookup table
 
 ## Einstein's Objection, Revisited
 
-*Einstein and Bohr, photographed by Paul Ehrenfest, c. 1925. Their debates at the Solvay Conferences (1927, 1930) defined the interpretive crisis that persists today.*
+![Niels Bohr](images/bohr.jpg)
+*Niels Bohr (1885-1962), architect of the Copenhagen interpretation. His reply to Einstein — "Stop telling God what to do" — became the orthodoxy for a century.*
 
 Einstein's complaint was never about the mathematics of quantum mechanics — he acknowledged its predictive success. His objection was *philosophical*: he believed that the apparent randomness of quantum measurements must arise from our ignorance of some deeper, deterministic structure. There must be "hidden variables" — additional information that, if known, would make the outcomes deterministic.
 

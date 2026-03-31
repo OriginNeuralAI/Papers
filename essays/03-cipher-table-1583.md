@@ -9,6 +9,9 @@
 
 On a winter day in 1583, a man sat in a study in Mortlake, a village on the Thames west of London, surrounded by the largest private library in England. He had four thousand books — more than the University of Cambridge. He had navigational charts, astronomical instruments, alchemical apparatus. He had a crystal ball through which he believed he could speak with angels.
 
+![Renaissance Scholar's Study](images/dee_study.png)
+*A Renaissance scholar's study, c. 1583 — surrounded by books, instruments, and cipher tables that would not be understood for four centuries.*
+
 His name was John Dee.
 
 He was, by any measure, the most remarkable intellect of the Elizabethan age — and perhaps the most contradictory. He was Elizabeth I's court mathematician, her trusted advisor on matters of astrology, navigation, and espionage (his signature on secret correspondence was "007" — a notation that Ian Fleming, centuries later, would borrow for his fictional spy). He coined the term "British Empire" and drew up the legal and geographical arguments for England's claim to North America. He designed the navigational tables that guided English ships across the Atlantic. His mathematical preface to the first English Euclid (1570) introduced an entire generation to the power of applied mathematics.

@@ -44,6 +44,9 @@ This leads to three celebrated algorithms:
 
 The orthodox explanation for all three: superposition provides exponential parallelism. The quantum computer "tries all answers at once" and interference selects the right one.
 
+![Quantum Circuit Basins](images/quantum_circuit_basins.png)
+*Quantum circuits reimagined: qubit pathways flowing into basin attractors with sizes proportional to [9:7:1:6].*
+
 ---
 
 ## The Heresy

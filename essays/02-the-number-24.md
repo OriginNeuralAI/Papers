@@ -7,6 +7,9 @@
 
 ---
 
+![Srinivasa Ramanujan](images/ramanujan.jpg)
+*Srinivasa Ramanujan (1887-1920), the self-taught genius from Kumbakonam whose notebooks contained formulas that mathematicians are still proving a century later.*
+
 Srinivasa Ramanujan — the self-taught Indian mathematician who sent unsolicited letters to G.H. Hardy at Cambridge in 1913, filling them with formulas that Hardy called "the most remarkable I had ever seen" — once said that every positive integer was one of his personal friends. If that is true, then 24 was his best friend. It appeared in his tau function, his modular equations, his partition identities. He could not escape it.
 
 Neither can we.
@@ -18,6 +21,9 @@ It appears in the symmetries of a square (the symmetric group S₄ has 24 elemen
 And now it appears in a 500-year-old cipher table: the order of the Reeds endomorphism times its number of basins equals 6 × 4 = 24.
 
 Eleven independent paths. One number. Zero free parameters.
+
+![The Number 24](images/number24_cosmic.png)
+*Omega = 24: the universality constant at the intersection of eleven independent mathematical structures.*
 
 This essay is about why.
 
@@ -46,6 +52,9 @@ Your iPhone uses the Leech lattice's cousin — the Golay code — for error cor
 ---
 
 ## Path 3: The Monster Group
+
+![The Monster Group](images/monster_constellation.png)
+*The Monster group visualized: an impossibly complex structure with 8 × 10⁵³ symmetries, central charge c = 24.*
 
 The Monster group M is the largest of the 26 sporadic simple groups — mathematical symmetry objects that don't fit into any infinite family. Its existence was predicted in 1973 by Bernd Fischer and Robert Griess before anyone knew how to construct it. Griess finally built it in 1982 — a tour de force involving a 196,883-dimensional algebra he assembled by hand, earning him the name "the man who built the Monster." The construction took years and filled hundreds of pages. Its order is:
 
