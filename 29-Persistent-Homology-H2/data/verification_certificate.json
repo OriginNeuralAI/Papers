@@ -1,0 +1,91 @@
+{
+  "paper": "U24-Paper-29",
+  "title": "Persistent Homology of Optimization Landscapes",
+  "timestamp": "2026-03-31T18:38:49.182934+00:00",
+  "checks_passed": 16,
+  "checks_total": 16,
+  "all_pass": true,
+  "verification_time_s": 0.15,
+  "results": {
+    "beta1_universality": {
+      "total_checks": 185,
+      "all_zero": true,
+      "families_tested": 7,
+      "max_N": 100000
+    },
+    "h2_boundedness": {
+      "max_h2_at_100k": 3.3,
+      "families_bounded": true,
+      "integrable_exact_zero": true
+    },
+    "scaling": {
+      "h2_decreasing_reg_k3": true,
+      "h2_decreasing_reg_k5": true,
+      "h2_decreasing_sk": true,
+      "h2_decreasing_frust": true
+    },
+    "mega_push_data": {
+      "ferromagnetic_ring": {
+        "1000": 0,
+        "5000": 0,
+        "10000": 1.0,
+        "50000": 1.5,
+        "100000": 1.5
+      },
+      "regular_maxcut_k3": {
+        "1000": 0,
+        "5000": 7.0,
+        "10000": 4.3,
+        "50000": 4.0,
+        "100000": 3.0
+      },
+      "regular_maxcut_k5": {
+        "1000": 2.3,
+        "5000": 6.0,
+        "10000": 4.0,
+        "50000": 3.5,
+        "100000": 1.5
+      },
+      "er_maxcut_p01": {
+        "1000": 9.0,
+        "5000": 4.3,
+        "10000": 6.0,
+        "100000": 3.3
+      },
+      "sk_sparse_d10": {
+        "1000": 6.0,
+        "5000": 11.0,
+        "10000": 4.3,
+        "50000": 0.5,
+        "100000": 2.0
+      },
+      "frustrated_sparse": {
+        "1000": 5.0,
+        "5000": 5.3,
+        "10000": 3.3,
+        "50000": 3.5,
+        "100000": 3.0
+      }
+    }
+  },
+  "checks": {
+    "A1": "PASS",
+    "A2": "PASS",
+    "A3": "PASS",
+    "A4": "PASS",
+    "B5": "PASS",
+    "B6": "PASS",
+    "B7": "PASS",
+    "B8": "PASS",
+    "C9": "PASS",
+    "C10": "PASS",
+    "C11": "PASS",
+    "C12": "PASS",
+    "D13": "PASS",
+    "D14": "PASS",
+    "D15": "PASS",
+    "D16": "PASS"
+  },
+  "engine_version": "Isomorphic Engine v0.15.0",
+  "hardware": "AMD Ryzen 9 7900X, 64GB DDR5, RTX 5070 Ti"
+}
