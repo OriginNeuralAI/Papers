@@ -393,9 +393,7 @@ See Figure~\ref{fig:beta1_heatmap} for a visual summary.
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: $\betaone = 0$
-universality heatmap. Rows = families, columns = scales. All cells green
-(PASS).}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig1_beta1_heatmap.pdf}
 \caption{$\betaone = 0$ universality heatmap across all operator families and
 scales. Every cell is $\betaone = 0$ (green). 185/185 checks PASS.}
 \label{fig:beta1_heatmap}
@@ -468,8 +466,7 @@ The data in Table~\ref{tab:h2} reveal three distinct regimes:
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: $\Htwo$ scaling
-trends for 6 families. Log-$x$ axis, showing convergence to $O(1)$.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig2_h2_scaling.pdf}
 \caption{$\Htwo$ topological complexity estimate vs.\ system size $N$ (log scale)
 for six operator families. All curves converge or decrease, confirming $\Htwo = O(1)$.}
 \label{fig:h2_scaling}
@@ -477,8 +474,7 @@ for six operator families. All curves converge or decrease, confirming $\Htwo = 
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: $\Htwo$ vs.\ $N$
-for SK Sparse $d=10$, showing decreasing trend with error bars.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig3_h2_sk_sparse.pdf}
 \caption{$\Htwo$ vs.\ $N$ for SK Sparse $d=10$. The peak at $N = 5{,}000$
 ($\Htwo = 11$) decreases to $\Htwo = 2$ at $N = 100{,}000$.}
 \label{fig:h2_sk}
@@ -486,8 +482,7 @@ for SK Sparse $d=10$, showing decreasing trend with error bars.}\vspace{2cm}}}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: Ferromagnetic
-Ring $\Htwo = 0$ exact up to $N = 5{,}000$, flat line at 0.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig4_ferro_h2_exact.pdf}
 \caption{Ferromagnetic Ring: $\Htwo = 0$ exactly for $N \leq 5{,}000$. The integrable
 landscape has no topological complexity at any tested scale.}
 \label{fig:h2_ferro}
@@ -548,9 +543,7 @@ Ferromagnetic Ring     & 0.00 & 1.5  & Degenerate \\
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: $r$-statistic
-vs.\ $N$ by family, with Poisson ($r \approx 0.386$) and GUE ($r \approx 0.536$)
-reference lines.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig5_rstat_families.pdf}
 \caption{$r$-statistic vs.\ $N$ for each operator family. Sparse random graphs
 cluster near the Poisson value; dense/frustrated systems are intermediate.
 No family reaches the GUE threshold.}
@@ -559,8 +552,7 @@ No family reaches the GUE threshold.}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: Landscape
-topology classification pie chart for each family.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig6_classification_pie.pdf}
 \caption{Landscape topology classification by family. Sparse graphs are
 overwhelmingly Poisson (many independent basins); dense systems are intermediate.}
 \label{fig:pie}
@@ -587,8 +579,7 @@ Key findings:
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: Betti number
-comparison ($\betazero$, $\betaone$) at various $N$.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig7_betti_comparison.pdf}
 \caption{Betti number summary: $\betazero$ (connected components) varies with
 family and scale, while $\betaone = 0$ universally.}
 \label{fig:betti}
@@ -692,8 +683,7 @@ implementation (Ripser, GUDHI, Dionysus) on Ising solution sets.
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}\textit{Figure: Computational
-time vs.\ $N$ for each family, showing engine efficiency at scale.}\vspace{2cm}}}
+\includegraphics[width=0.85\textwidth]{figures/fig8_timing_scaling.pdf}
 \caption{Wall-clock time vs.\ system size $N$ for the Isomorphic Engine.
 $N = 100{,}000$-spin instances complete in 8--165 seconds depending on
 graph density. Total campaign: 951 seconds.}

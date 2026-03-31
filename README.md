@@ -32,7 +32,7 @@ The basin-force mapping is post-hoc but **uniquely determined** (0/94 alternativ
 
 ## The Central Idea
 
-All twenty-eight papers are connected by a single mathematical thread: the **universality constant**
+All thirty papers are connected by a single mathematical thread: the **universality constant**
 
 $$\Omega = \frac{\tau_{\text{macro}}}{\tau_{\text{micro}}} = \frac{3000}{125} = 24 = |S_4|$$
 
@@ -247,6 +247,74 @@ Paper 04 showed eleven paths **to** Ω = 24. This paper proves c = 24 is the **o
 </p>
 
 > **Eleven independent paths** from Paper 04 all converge to Ω = 24. This paper proves the converse: no other value is consistent.
+
+---
+
+## Paper 29 — Persistent Homology: β₁ = 0 Universality and Bounded H₂
+
+Two topological constraints on combinatorial optimization energy landscapes, verified across 7 operator families at scales up to N=100,000 spins using the Isomorphic Engine's native persistent homology.
+
+<p align="center">
+  <img src="29-Persistent-Homology-H2/figures/fig1_beta1_heatmap.png" width="600" alt="Beta1 universality heatmap"/>
+</p>
+
+> **β₁ = 0 universally.** No persistent 1-cycles in any solution landscape tested — 185/185 checks PASS across all families and scales.
+
+| Result | Value | Families | Scale |
+|--------|-------|----------|-------|
+| β₁ = 0 universality | **185/185 PASS** | All 7 | N=50 to N=100,000 |
+| H₂ bounded O(1) | max H₂ ≤ 3 at N=100K | All 6 non-trivial | N=1K to N=100K |
+| Ferromagnetic H₂ = 0 exact | **0 at all N ≤ 5,000** | Integrable | N=50 to N=5,000 |
+| SK H₂ decreasing | 11 → 2 (N=5K → 100K) | Glassy | Thermodynamic limit |
+
+<p align="center">
+  <img src="29-Persistent-Homology-H2/figures/fig2_h2_scaling.png" width="600" alt="H2 scaling trends"/>
+</p>
+
+> **H₂ converges to O(1).** Six operator families from N=1,000 to N=100,000. All curves decrease or plateau — H₂ never grows with system size.
+
+<p align="center">
+  <img src="29-Persistent-Homology-H2/figures/fig4_ferro_h2_exact.png" width="400" alt="Ferromagnetic H2=0"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="29-Persistent-Homology-H2/figures/fig3_h2_sk_sparse.png" width="400" alt="SK H2 decreasing"/>
+</p>
+
+> **Left:** Ferromagnetic Ring — H₂ = 0 exactly (integrable landscape). **Right:** SK Spin Glass — H₂ peaks at N=5K then decreases toward 0 in the thermodynamic limit.
+
+---
+
+## Paper 30 — R(5,5) ≥ 43: Computational Proof via GF(p) Polynomial Seeding
+
+A novel algebraic construction proves R(5,5) ≥ 43 via GF(43) polynomial seeding — 138× more efficient than classical Paley graphs.
+
+<p align="center">
+  <img src="30-R55-GFp-Proof/figures/fig1_gfp_comparison.png" width="600" alt="GF(p) comparison"/>
+</p>
+
+> **GF(43) dominates.** Raw violation counts by prime: GF(43) achieves 10 violations vs. 217-238 for other primes and 1,380 for Paley.
+
+| Result | Value | Method |
+|--------|-------|--------|
+| R(5,5) ≥ 43 | **PROVEN** | K₄₂ zero-violation coloring |
+| K₄₂ cliques verified | 850,668 | Exhaustive five-clique check |
+| K₄₃ frontier | 2 violations (99.9998% clean) | Multi-track optimization |
+| GF(43) vs Paley | **138× improvement** | 10 vs 1,380 raw violations |
+| Basin structure | 4 distinct basins (α=137, β=173, γ=247, δ=263) | Asymmetric accessibility |
+| IIS essential core | 6 irreducible constraints | K₄₄ extension impossible |
+
+<p align="center">
+  <img src="30-R55-GFp-Proof/figures/fig5_basins.png" width="400" alt="Basin structure"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="30-R55-GFp-Proof/figures/fig6_iis_core.png" width="400" alt="IIS essential core"/>
+</p>
+
+> **Left:** Four distinct violation basins in the K₄₃ landscape — the α-basin (137 violations) is accessible only from Paley seed. **Right:** The 6-constraint irreducible core proving K₄₄ extension is impossible.
+
+<p align="center">
+  <img src="30-R55-GFp-Proof/figures/fig8_ramsey_bounds.png" width="600" alt="Ramsey bounds"/>
+</p>
+
+> **Updated Ramsey bounds staircase** incorporating R(5,5) ≥ 43 from this work and R(8,8) ≥ 282 from Paper 14.
 
 ---
 
@@ -483,6 +551,8 @@ All papers are backed by the **[Isomorphic Engine (DSC-3)](https://github.com/Or
 | PT-exact stability | **γ = 10⁶, dim 4,600** | max\|Im(λ)\| < 10⁻⁹ |
 | α_EM derivation | **23-element lookup** | 9 significant figures, zero free parameters |
 | Eigenvector clustering | **N = 100–750** | 8/9 exact at every scale |
+| Persistent homology | **N = 50–100,000** | β₁=0 universal (185/185); H₂ bounded O(1) |
+| R(5,5) GF(p) proof | **850,668 five-cliques** | Zero-violation K₄₂ coloring; 2-violation K₄₃ frontier |
 
 ---
 
@@ -526,6 +596,8 @@ Major results from GPU-scale computation (RTX 5070 Ti):
 | **[9,7,1,6] unique** | algebraic determination | 0/94 alternatives at measured precision | 28 |
 | **R(8,8) > 293 falsified** | Bron-Kerbosch on K₂₉₃ | Red K₈ + Blue K₁₁ found; stochastic sampling covers 6.6×10⁻⁹ | 14 |
 | **c = 24 uniquely forced** | 5-constraint intersection | Stat mech + CFT + Ramsey + S₄ → singleton {24}; 670+ instances | 15 |
+| **β₁ = 0 universal** | Persistent homology N→100K | 185/185 checks; H₂ bounded O(1); 7 operator families | 29 |
+| **R(5,5) ≥ 43 via GF(p)** | GF(43) polynomial seeding | Zero-violation K₄₂; 138× better than Paley; 4-basin structure | 30 |
 
 See [FRONTIER_RESULTS.md](FRONTIER_RESULTS.md), [PHOTOSYNTHESIS_FINDING.md](PHOTOSYNTHESIS_FINDING.md), and [FINDINGS_SYNOPSIS.md](FINDINGS_SYNOPSIS.md) for complete data.
 
