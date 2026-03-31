@@ -97,49 +97,27 @@ The entropy that increases is the *intra-basin* entropy. Within each basin B_k, 
 
 ---
 
-## Proof 4: PT-Exact at All γ
+## Proof 4: Real Spectrum of J + iγG (Corrected)
 
-**Theorem.** The operator H_PT = αJ + iγG, where J is the 23×23 enriched coupling matrix and G = (A−A^T)/2 is the anti-symmetric part of the Reeds adjacency, has entirely real eigenvalues for all γ ∈ [0, ∞).
+**Theorem.** The operator M = αJ + iγG, where J is real symmetric and G is real anti-symmetric, has entirely real eigenvalues for all γ ∈ [0, ∞).
 
-**Proof.**
+**Proof.** M is Hermitian.
 
-*Step 1.* J is real symmetric: J = J^T. G is real anti-symmetric: G = −G^T.
+*Step 1.* J is real symmetric: J† = J^T = J.
 
-*Step 2.* M = αJ + iγG is complex symmetric: M^T = αJ^T + iγG^T = αJ − iγG. But M* = αJ − iγG (since J, G are real). Therefore M^T = M* , i.e., M = M^T (complex symmetric) and M̄ = M^T (conjugate equals transpose).
+*Step 2.* G is real anti-symmetric: G^T = −G. Therefore (iG)† = −iG^T = −i(−G) = iG. So iG is Hermitian.
 
-*Step 3.* For any complex symmetric matrix M, if v is an eigenvector with eigenvalue λ, then M*v̄ = M̄v̄ = M^Tv̄ = λ̄v̄ (taking conjugate of Mv = λv). So v̄ is an eigenvector of M^T = M with eigenvalue λ̄. But M is complex symmetric, so M has the same eigenvalues as M^T. This means eigenvalues come in conjugate pairs {λ, λ̄}.
+*Step 3.* M = αJ + iγG = (Hermitian) + γ(Hermitian) = Hermitian.
 
-*Step 4 (the key).* For the SPECIFIC Reeds structure, we prove all eigenvalues are real (not just conjugate-paired).
+*Step 4.* Hermitian matrices have real eigenvalues. ∎
 
-Compute the commutator [J, G] = JG − GJ. Numerically: the anti-symmetric part (JG−GJ−(JG−GJ)^T)/2 has Frobenius norm < 10⁻¹². Therefore [J, G] is pure symmetric: [J, G] = [J, G]^T.
+**Note.** This proof is trivial and holds for ANY real symmetric J and ANY real anti-symmetric G. It is NOT special to the Reeds endomorphism. The elaborate mechanism described in earlier versions (7 conjugate pairs, [J,G] commutator, photon anchor) was incorrect — it explained a phenomenon that doesn't need explaining. The operator was Hermitian all along.
 
-*Step 5.* When [J, G] is symmetric, the matrices J and G can be simultaneously brought to a form where M = αJ + iγG is block-diagonal with blocks of size ≤ 2. Each 2×2 block has the form:
+**Correction to Paper II.** The "PT-exact discovery" should be reclassified from "unprecedented in non-Hermitian QM" to "trivial consequence of Hermiticity." The operator H_PT = J + iγG was never non-Hermitian.
 
-```
-[[a_k, iγμ_k], [iγμ_k, b_k]]
-```
+**What remains interesting.** The PHYSICAL interpretation — that the Reeds endomorphism's anti-symmetric part G encodes gain-loss dynamics — is still valid. The mathematical fact is that these dynamics preserve Hermiticity (and hence unitarity) because iG is Hermitian. This is not a deep algebraic property but a consequence of the real-valued nature of the Reeds map.
 
-where a_k, b_k are real (from J) and ±iμ_k are the imaginary eigenvalues of G. The eigenvalues of this block are:
-
-```
-(a_k + b_k)/2 ± √((a_k − b_k)²/4 − γ²μ_k²)
-```
-
-*Step 6.* These eigenvalues are real when (a_k − b_k)²/4 ≥ γ²μ_k², i.e., when the J gap exceeds twice the G coupling. For the Reeds structure, this condition holds **for all γ** because the block decomposition from Step 5 is exact (not perturbative) — the 2×2 blocks decouple exactly due to [J,G] being symmetric.
-
-More precisely: when [J, G] is symmetric, J and G share a common block-diagonal structure with blocks of size at most 2. Within each block, the eigenvalues are functions of γ that either:
-(a) remain real for all γ (if the block is 1×1), or
-(b) are real for all γ if and only if the discriminant is non-negative for all γ.
-
-Case (b) requires (a_k − b_k)² ≥ 0, which is always true. The minus sign in the discriminant means we need (a_k − b_k)²/4 − γ²μ_k² ≥ 0 for all γ, which would fail at large γ.
-
-**Correction:** The eigenvalues DO become complex at large γ within individual 2×2 blocks. But the FULL 23×23 matrix doesn't break because the blocks interact. The exact mechanism is that the commutator condition [J,G] = symmetric ensures the TOTAL spectrum remains real through global constraints, not block-by-block.
-
-**Computational proof:** Verified numerically at γ = 1, 10, 100, 10³, 10⁴, 10⁵, 10⁶ at dimensions 23 and 4,600. max|Im(λ)| scales as γ × machine_epsilon (IEEE 754 artifact), confirming exact reality. ∎
-
-**Note:** A fully rigorous analytic proof requires showing that the [J,G]-symmetric condition implies a pseudo-Hermiticity operator η exists such that H_PT = η H_PT† η⁻¹ for all γ. This is verified numerically but the closed-form η is not yet derived. The result is COMPUTATIONALLY PROVED but not yet ANALYTICALLY PROVED in the strict mathematical sense.
-
-**Verification scripts:** `pt_symmetric_computation.py`, `adversarial_falsification.py` (Attack 1).
+**Verification:** Confirmed for random J, G at γ = 10,000: max|Im(λ)| = 3.27 × 10⁻¹² (machine zero).
 
 ---
 
@@ -306,7 +284,7 @@ Both B₃ = 6 and B₀ = 9 are fixed by Tier 2 (B₃ from Weinberg, B₀ from al
 | Reeds structure | Direct computation | **Complete** |
 | Entropy production | Algebraic (revised: ordering, not randomising) | **Complete** |
 | 8/9 clustering | Eigenvector computation + tensor product | **Complete** |
-| PT-exact | Computational (analytic proof in progress) | **Computational** |
+| Real spectrum (J+iγG) | Hermiticity (trivial) | **Complete** (corrected — was overclaimed) |
 | Channel capacity | Information theory | **Complete** |
 | Born rule | Counting measure on invariant partition | **Complete** |
 | Algebraic uniqueness | Exhaustive enumeration | **Complete** |
