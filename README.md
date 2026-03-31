@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Papers-30-blue?style=for-the-badge" alt="Papers"/>
+  <img src="https://img.shields.io/badge/Papers-28-blue?style=for-the-badge" alt="Papers"/>
   <img src="https://img.shields.io/badge/Theorems-8-brightgreen?style=for-the-badge" alt="Theorems"/>
   <img src="https://img.shields.io/badge/Predictions-3%20derived-gold?style=for-the-badge" alt="Predictions"/>
   <img src="https://img.shields.io/badge/1%2F%CE%B1-9%20sig%20figs-red?style=for-the-badge" alt="Alpha"/>
@@ -9,12 +9,14 @@
 
 # The Daugherty-Ward-Ryan Research Papers
 
-> *Thirty papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
+> *Twenty-eight papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
 
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan
 **Affiliation:** SmartLedger Solutions / Origin Neural AI
 **Date:** January — March 2026
 **Engine:** [Isomorphic Engine v0.15.0](https://github.com/OriginNeuralAI/DSC-3) — GPU-accelerated, **3.87 billion spins/sec** on RTX 5070 Ti
+
+> **New here?** Start with the [essays](essays/) for the narrative arc (45–60 min), then use this README as a technical roadmap into any paper.
 
 ---
 
@@ -30,7 +32,7 @@ The basin-force mapping is post-hoc but **uniquely determined** (0/94 alternativ
 
 ## The Central Idea
 
-All thirty papers are connected by a single mathematical thread: the **universality constant**
+All twenty-eight papers are connected by a single mathematical thread: the **universality constant**
 
 $$\Omega = \frac{\tau_{\text{macro}}}{\tau_{\text{micro}}} = \frac{3000}{125} = 24 = |S_4|$$
 
@@ -46,6 +48,9 @@ which appears independently across **eleven** mathematical structures:
 ---
 
 ## Papers at a Glance
+
+<details open>
+<summary><strong>Full paper index (click to collapse)</strong></summary>
 
 ### 🔢 Foundations
 
@@ -154,6 +159,8 @@ which appears independently across **eleven** mathematical structures:
 | 11 | [**Hodge Conjecture**](11-Hodge-Conjecture/) | Moonshine lift via K3; χ(K3) = 24 | ⚡ Conditional (Kuga-Satake wt > 2) |
 | 12 | [**Navier-Stokes Regularity**](12-Navier-Stokes-Regularity/) | GUE spectral floor → BKM → global regularity; dim 24,000 verified | ⚡ Conditional (BGS extension) |
 | 13 | [**P ≠ NP**](13-P-vs-NP-Ising-Landscapes/) | 10-theorem chain; n=50K saturation; RSB q_EA → 0.50; 35/35 checks | ⚡ Conditional (SOS conjecture) |
+
+</details>
 
 ---
 
@@ -378,7 +385,7 @@ graph TD
 
     STAG --> PNP["P vs NP -- Paper 13"]
     STAG --> YM["Yang-Mills -- Paper 09"]
-    STAG --> RAM["Ramsey -- Papers 02, 03"]
+    STAG --> RAM["Ramsey -- Papers 02, 03, 14"]
 
     K3 --> HODGE["Hodge Conjecture -- Paper 11"]
     K3 --> K3Z["K3-Zeta Duality -- Paper 19"]
@@ -396,6 +403,7 @@ graph TD
     GOLD --> COH["Quantum Coherence Necessity"]
     GOLD --> GALOIS["Galois-Landscape Conjecture"]
 
+    O --> UNIQUE15["c=24 Unique -- Paper 15"]
     O --> PM["Post-Millennium -- Papers 23-28"]
     PM --> BORN["Born Rule = 8/9 Counting"]
     PM --> PT["PT-Exact ∀ γ"]
@@ -408,6 +416,11 @@ graph TD
     STR --> CAB["sin θ_C = 26²/3000"]
     STR --> UNIQUE["[9,7,1,6] Algebraically Unique"]
 
+    RAM --> R88["R(8,8) Falsified -- Paper 14"]
+    UNIQUE15 --> S4
+
+    style R88 fill:#e74c3c,stroke:#333,stroke-width:2px
+    style UNIQUE15 fill:#daa520,stroke:#fff,stroke-width:3px
     style GOLD fill:#daa520,stroke:#333,stroke-width:3px
     style BIO fill:#4caf50,stroke:#333,stroke-width:2px
     style PM fill:#e74c3c,stroke:#333,stroke-width:3px
