@@ -1,0 +1,62 @@
+{
+  "experiment": "r88_gpu_sparse_attack",
+  "timestamp": "2026-03-15T10:15:34",
+  "params": {
+    "n": 293,
+    "k": 8,
+    "ne": 42778,
+    "dims": [
+      50,
+      100,
+      200
+    ],
+    "probs": [
+      0.35,
+      0.4
+    ],
+    "seeds": 3,
+    "restarts": 20
+  },
+  "coupling_weights": {
+    "adj": 1.349571246035032e-05,
+    "dis": 2.326846975922469e-07,
+    "delta": 1.3263027762758072e-05,
+    "n_adj_pairs": 12448398
+  },
+  "global_best_violations": 0,
+  "results": [
+    {
+      "dim": 50,
+      "prob": 0.35,
+      "seed": 0,
+      "v_estimated": 0,
+      "mono_in_sample": 0,
+      "n_samples": 500000,
+      "red_frac": 0.6515,
+      "gpu_energy": -0.1378559023141861,
+      "time_s": 2220.0
+    },
+    {
+      "dim": 50,
+      "prob": 0.35,
+      "seed": 1,
+      "v_estimated": 0,
+      "mono_in_sample": 0,
+      "n_samples": 500000,
+      "red_frac": 0.6528,
+      "gpu_energy": -0.14501795172691345,
+      "time_s": 2285.3
+    },
+    {
+      "dim": 50,
+      "prob": 0.35,
+      "seed": 2,
+      "v_estimated": 0,
+      "mono_in_sample": 0,
+      "n_samples": 500000,
+      "red_frac": 0.6535,
+      "gpu_energy": -0.14655646681785583,
+      "time_s": 2554.4
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[08:17:45] 
+======================================================================
+[08:17:45]   R(8,8) GPU ATTACK — K293 (42,778 edges)
+[08:17:45]   Sparse coupling + DSC-2 SBMSolverGPU
+[08:17:45]   GPU available: True
+[08:17:45]   Device: NVIDIA GeForce RTX 5070 Ti
+[08:17:45]   GPU memory: 17.1 GB
+[08:17:45] ======================================================================
+
+[08:17:45]   Building sparse coupling matrix...
+[08:17:45]   Coupling weights: adj=1.349571e-05, dis=2.326847e-07, delta=1.326303e-05
+[08:17:45]   Edges: 42778, building vertex-to-edge map...
+[08:17:45]   Adjacent pairs: 12,448,398 (vs 914,957,253 total pairs)
+[08:17:45]   Sparsity: 1.36% nonzero
+[08:17:50]   COO entries: 24,896,796
+[08:17:54]   Sparse coupling built in 8.7s
+
+[08:54:54]     d=50 p=0.35 s=0: v_est=0 (mono=0/500000) rf=65.15% E=-0.1378559023141861 [2220.0s] *** NEW BEST ***
+[09:32:59]     d=50 p=0.35 s=1: v_est=0 (mono=0/500000) rf=65.28% E=-0.14501795172691345 [2285.3s]
+[10:15:34]     d=50 p=0.35 s=2: v_est=0 (mono=0/500000) rf=65.35% E=-0.14655646681785583 [2554.4s]
+[10:15:34]   Time budget 90% consumed, stopping
+[10:15:34] 
+======================================================================
+[10:15:34]   R(8,8) K293 COMPLETE
+[10:15:34]   Best estimated violations: 0
+[10:15:34]   Total time: 7069s (1.96h)
+[10:15:34] ======================================================================
+[10:15:34]   Results saved: C:\Users\ripva\Downloads\Physics_Research\Part-X_Ramsey-Theory\results\r88\r88_gpu_sparse_20260315_101534.json
+[10:15:34]   Best coloring: C:\Users\ripva\Downloads\Physics_Research\Part-X_Ramsey-Theory\results\r88\K293_best_20260315_101534.npy

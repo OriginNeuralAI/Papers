@@ -1,0 +1,15 @@
+{
+  "theorem": "Zero-Core",
+  "verified": true,
+  "total_constraints": 2480,
+  "red_k4": 1235,
+  "blue_k4": 1245,
+  "essential_count": 0,
+  "essential_indices": [],
+  "violations": {
+    "red_k5": 64,
+    "blue_k5": 73
+  },
+  "total_time_s": 215.99,
+  "timestamp": "2026-03-16T13:02:15"
+}

@@ -1,0 +1,11 @@
+{
+  "k": 8,
+  "n": 281,
+  "n_edges": 39340,
+  "paley_prime": 281,
+  "violations": 0,
+  "red_mono": 0,
+  "blue_mono": 0,
+  "status": "zero_violations",
+  "note": "Paley(281) is K8-free! Valid 2-coloring proving R(8,8) > 281"
+}

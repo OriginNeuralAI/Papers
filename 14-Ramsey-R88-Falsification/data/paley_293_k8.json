@@ -1,0 +1,9 @@
+{
+  "prime": 293,
+  "k": 8,
+  "violations": 2310012,
+  "clean": false,
+  "elapsed_seconds": 31.107,
+  "timestamp": "2026-03-14T17:51:58.117362",
+  "implication": "Paley(293) has 2310012 monochromatic K_8 cliques"
+}
