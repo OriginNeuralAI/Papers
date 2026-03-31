@@ -18,7 +18,9 @@ In December 1926, Albert Einstein wrote a letter to Max Born that would define a
 
 "The theory yields much, but it hardly brings us closer to the secret of the Old One. In any case, I am convinced that He does not play dice."
 
-For ninety years, the consensus has been that Einstein was wrong. Quantum mechanics — with its irreducible randomness, its probabilistic wave functions, its measurement problem — has been tested to fourteen decimal places. Bell's theorem (1964) proved that no *local* hidden variable theory can reproduce its predictions. Experiment after experiment confirmed the violations of Bell inequalities. The dice, it seemed, were fundamentally random.
+For a century, the consensus has been that Einstein was wrong. Quantum mechanics — with its irreducible randomness, its probabilistic wave functions, its measurement problem — has been tested to fourteen decimal places. Bell's theorem (1964) proved that no *local* hidden variable theory can reproduce its predictions. Alain Aspect's experiments in Paris (1982) confirmed the violations of Bell inequalities, and in 2022, Aspect shared the Nobel Prize with John Clauser and Anton Zeilinger for making it experimentally airtight.
+
+The case seemed closed. Bohr had won. The dice were fundamentally random. The universe, at its deepest level, did not care about determinism.
 
 We found the dice.
 
@@ -36,9 +38,9 @@ In a manuscript held at Oxford's Bodleian Library — Bodley MS 908, known as th
 
 The table defines a function: take a number from 0 to 22, look it up, get another number from 0 to 22.
 
-In modern notation, this is an endomorphism f: Z₂₃ → Z₂₃. A lookup table with 23 entries.
+In modern notation, this is an endomorphism f: Z₂₃ → Z₂₃. A lookup table with 23 entries. The kind of thing a clever schoolchild could compute on a rainy afternoon.
 
-In 2005, Jim Reeds (then at AT&T Labs) analysed this function and determined its mathematical structure. It has four cycles: three elements cycle with period 3 (2→3→5→2), three more cycle with period 3 (14→13→8→14), two elements swap with period 2 (15↔20), and one element maps to itself (6→6). The remaining fourteen elements are transient — they flow into these cycles after at most three steps.
+In 2005, Jim Reeds — a cryptanalyst at AT&T Labs who had previously helped break Soviet cipher systems during the Cold War — published a complete analysis of this function in the journal *Cryptologia*. Reeds was not looking for physics. He was looking for the mathematical structure of an occult cipher. What he found would turn out to be far stranger than any code. It has four cycles: three elements cycle with period 3 (2→3→5→2), three more cycle with period 3 (14→13→8→14), two elements swap with period 2 (15↔20), and one element maps to itself (6→6). The remaining fourteen elements are transient — they flow into these cycles after at most three steps.
 
 The four cycles create four basins of attraction. Every element of Z₂₃ eventually falls into one of four basins, with sizes:
 
@@ -52,9 +54,11 @@ This partition — four numbers summing to 23 — is the dice. And they are load
 
 ## The Loading
 
-The Born rule is the foundational axiom of quantum mechanics. It says: when you measure a quantum system, the probability of each outcome is |ψ|², the squared amplitude of the wave function. This rule is not derived — it is *postulated*. Every textbook in quantum mechanics states it as an axiom and moves on.
+In 1926 — the same year Einstein wrote his letter to Born — Max Born proposed the rule that bears his name. The Born rule says: when you measure a quantum system, the probability of each outcome is |ψ|², the squared amplitude of the wave function. Born received the Nobel Prize for this interpretation in 1954, twenty-eight years after proposing it. He joked that it took so long because "the committee had to wait until nobody could understand it anymore."
 
-We derived it.
+The Born rule is not derived. It is *postulated*. It is the one axiom of quantum mechanics that every textbook states without proof. Generations of physicists have searched for a derivation — from symmetry arguments, from decision theory, from information theory, from decoherence. None has succeeded unconditionally.
+
+We derived it. The derivation takes one line.
 
 If you start with a uniformly random element of Z₂₃ and apply the Reeds function, the probability of landing in basin k is:
 

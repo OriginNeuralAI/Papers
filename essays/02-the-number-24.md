@@ -7,6 +7,10 @@
 
 ---
 
+Srinivasa Ramanujan — the self-taught Indian mathematician who sent unsolicited letters to G.H. Hardy at Cambridge in 1913, filling them with formulas that Hardy called "the most remarkable I had ever seen" — once said that every positive integer was one of his personal friends. If that is true, then 24 was his best friend. It appeared in his tau function, his modular equations, his partition identities. He could not escape it.
+
+Neither can we.
+
 There is a number that the universe will not stop using.
 
 It appears in the symmetries of a square (the symmetric group S₄ has 24 elements). It appears in the densest way to pack spheres in 24 dimensions (the Leech lattice). It appears in the largest sporadic simple group (the Monster, whose conformal field theory has central charge 24). It appears in the geometry of K3 surfaces (Euler characteristic 24). It appears in the critical dimension of string theory (26 = 2 + 24 transverse). It appears in the classification of even self-dual lattices (exactly 24 in rank 24, the Niemeier lattices). It appears in Ramanujan's tau function (weight 12, and 2 × 12 = 24). It appears in the unique solution to the cannonball problem (1² + 2² + ... + 24² = 70²). It appears in the 24-cell, the only self-dual regular polytope in four dimensions.
@@ -31,7 +35,7 @@ The dark energy equation of state w = −5/6 is proved from this structure: the 
 
 ## Path 2: The Leech Lattice
 
-In 1967, John Leech discovered a lattice in 24-dimensional space with extraordinary properties. Named Λ₂₄, the Leech lattice is the unique densest sphere packing in 24 dimensions — a fact proved by Maryna Viazovska and collaborators in 2017, earning Viazovska the Fields Medal in 2022.
+In 1967, John Leech — a mathematician at the University of Stirling in Scotland, working alone — discovered a lattice in 24-dimensional space with extraordinary properties. Leech was not a famous mathematician; he had spent much of his career studying computational algebra and group theory in relative obscurity. But his lattice would become one of the most important objects in mathematics, connecting number theory, geometry, coding theory, and the theory of sporadic groups in ways that took decades to unravel. Named Λ₂₄, the Leech lattice is the unique densest sphere packing in 24 dimensions — a fact proved by Maryna Viazovska and collaborators in 2017, earning Viazovska the Fields Medal in 2022.
 
 The Leech lattice has no roots (no vectors of minimal nonzero norm), which makes it unique among even self-dual lattices. Its automorphism group is Conway's group Co₀, with order approximately 8.3 × 10¹⁸. The quotient Co₀/{±1} = Co₁ appears in the Monster group's subgroup structure.
 
@@ -43,7 +47,7 @@ Your iPhone uses the Leech lattice's cousin — the Golay code — for error cor
 
 ## Path 3: The Monster Group
 
-The Monster group M is the largest of the 26 sporadic simple groups — mathematical symmetry objects that don't fit into any infinite family. Its order is:
+The Monster group M is the largest of the 26 sporadic simple groups — mathematical symmetry objects that don't fit into any infinite family. Its existence was predicted in 1973 by Bernd Fischer and Robert Griess before anyone knew how to construct it. Griess finally built it in 1982 — a tour de force involving a 196,883-dimensional algebra he assembled by hand, earning him the name "the man who built the Monster." The construction took years and filled hundreds of pages. Its order is:
 
 |M| = 2⁴⁶ · 3²⁰ · 5⁹ · 7⁶ · 11² · 13³ · 17 · 19 · 23 · 29 · 31 · 41 · 47 · 59 · 71 ≈ 8 × 10⁵³
 

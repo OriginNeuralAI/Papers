@@ -12,7 +12,9 @@
 
 ---
 
-There is a $100 billion bet riding on a philosophical question.
+In 1981, Richard Feynman stood before an audience at MIT and proposed an idea that would take four decades to bear fruit: "Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical." He was arguing for what would become quantum computing — machines that exploit the weirdness of quantum mechanics to solve problems that classical computers cannot.
+
+Today, there is a $100 billion bet riding on what Feynman meant by "weirdness."
 
 The quantum computing industry — Google, IBM, Microsoft, Amazon, dozens of startups, and every major government on Earth — is built on a single assumption: that quantum mechanics provides access to exponential parallelism through superposition. A quantum bit (qubit) can be 0 and 1 "at the same time." A register of 300 qubits can be in 2³⁰⁰ states simultaneously — more than the number of atoms in the observable universe. This parallelism, the story goes, is what makes quantum computers exponentially faster than classical ones for certain problems.
 
@@ -34,9 +36,9 @@ The standard narrative, taught in every quantum computing textbook, goes like th
 
 This leads to three celebrated algorithms:
 
-**Shor's algorithm** (1994) factors large integers in polynomial time, threatening RSA encryption. Classical factoring takes exponential time; Shor's takes O(n³). Peter Shor, then at Bell Labs, showed that the quantum Fourier transform can extract the period of a function exponentially faster than any classical method.
+**Shor's algorithm** (1994) factors large integers in polynomial time, threatening the RSA encryption that protects every credit card transaction, every classified government communication, every Bitcoin wallet. Classical factoring takes exponential time; Shor's takes O(n³). Peter Shor, then a quiet mathematician at Bell Labs in Murray Hill, New Jersey, published his result on the arXiv in November 1994. Within hours, the NSA was reading it. Within weeks, the field of post-quantum cryptography was born. Shor himself later remarked that he was "just trying to solve an interesting math problem."
 
-**Grover's algorithm** (1996) searches an unsorted database of N items in O(√N) steps instead of O(N). Lov Grover, also at Bell Labs, showed this is optimal — no quantum algorithm can do better.
+**Grover's algorithm** (1996) searches an unsorted database of N items in O(√N) steps instead of O(N). Lov Grover, also at Bell Labs (the corridor between Shor's office and Grover's may have been the most consequential hallway in the history of computation), showed this is optimal — no quantum algorithm can do better. The quadratic speedup, while less dramatic than Shor's exponential, applies to virtually every search problem.
 
 **Random circuit sampling** (2019) was Google's "quantum supremacy" demonstration. Their 53-qubit Sycamore processor sampled from a random quantum circuit in 200 seconds — a task Google claimed would take a classical supercomputer 10,000 years. IBM disputed the classical estimate, but the demonstration stood: the quantum processor did *something* fast.
 
