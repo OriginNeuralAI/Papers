@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The Chain of Identifications}{4}{subsection.1.1}%
+\contentsline {section}{\numberline {2}$\mathrm {\Omega }= 24$ as String-Theoretic Central Charge}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Bosonic String Theory}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The Stagnation Partition Function as String Partition Function}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Monster-Prime Amplification as McKay--Thompson Characters}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Rational Constants as String Vacua Outputs}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Fine Structure Constant}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The Weak Mixing Angle}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Gauge-Gravitational Coupling}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Dark Energy from Calabi--Yau Dimension}{6}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Mathematical Closure: Spectral Operator + World-Sheet}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The RH Operator as String Hamiltonian}{6}{subsection.4.1}%
+\contentsline {section}{\numberline {5}The Heterotic Connection}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}$E_8 \times E_8$ from Even Unimodular Lattices}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Leech Lattice Ising Hierarchy}{7}{subsection.5.2}%
+\contentsline {section}{\numberline {6}No Free Moduli: Discrete Vacuum Selection}{7}{section.6}%
+\contentsline {section}{\numberline {7}The Algebraic Uniqueness Theorem}{8}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Falsification Attempts}{9}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Testable Predictions}{10}{section.8}%
+\contentsline {section}{\numberline {9}Computational Verification}{11}{section.9}%
+\contentsline {section}{\numberline {10}Discussion: The Closed Triangle}{11}{section.10}%

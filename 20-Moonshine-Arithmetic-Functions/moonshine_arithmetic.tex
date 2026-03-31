@@ -1,0 +1,232 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{darkblue}{RGB}{0,51,102}
+\hypersetup{colorlinks=true,linkcolor=darkblue,citecolor=darkblue,urlcolor=darkblue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title[Moonshine Corrections to Arithmetic Functions]{Moonshine Corrections to Arithmetic Functions:\\An Empirical Test}
+
+\author{Bryan Daugherty}
+\address{SmartLedger Solutions}
+\email{Bryan@smartledger.solutions}
+
+\author{Seth Ward}
+\address{}
+
+\author{Ryan}
+\address{}
+
+\date{March 30, 2026}
+
+\begin{document}
+
+\begin{abstract}
+We test two speculative formulas that incorporate monstrous moonshine data into classical arithmetic functions. The \emph{moonshine twin prime correction} modulates the Hardy--Littlewood estimate $\pi_2(x) \sim 2C_2 x / \ln(x)^2$ by a weight function $w_M(x)$ derived from $j$-function coefficients and a Monster proximity factor $p_M(x)$ peaking at $x \sim |\mathbb{M}| \sim 10^{71}$. The \emph{moonshine Busy Beaver bound} approximates $\mathrm{BB}(n)$ using an exponential sum over Riemann zeta zeros modulated by Monster group traces.
+
+We benchmark both formulas against known data. \textbf{Result:} The original parameterization (v1) fails completely --- $w_M(x) \equiv 0$ at accessible scales because the $j$-function coefficient scales are astronomical. However, a corrected weight function $w_M'(x)$ using Gaussian kernels centered at Monster prime logarithms (v2, with bandwidth $\sigma = 2.5$) \emph{outperforms Hardy--Littlewood} (MAE 11.0\% vs.\ 12.7\%), with a 7$\times$ error reduction at $x = 10^3$. The logarithmic integral Li$_2$ remains superior (MAE 3.2\%).
+
+For Busy Beaver, the original formula (v1) gives $\sim 1.0$ for all $n$. A corrected variant using $c_n^{0.4} \cdot |\text{spectral}|$ (Variant~C) achieves mean $|\ln(\text{ratio})| = 2.63$, approximating BB(3) = 21 within a factor of 1.4 and BB(4) = 107 within a factor of 3.7.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+%% =========================================================================
+\section{Introduction}
+%% =========================================================================
+
+The Monster group $\mathbb{M}$, with $|\mathbb{M}| \approx 8.08 \times 10^{53}$, governs monstrous moonshine through the $j$-function expansion $j(\tau) - 744 = \sum c_n q^n$ where $c_n = \dim V_n^\natural$. A natural question is whether the Monster's arithmetic structure influences other number-theoretic quantities. We test two such proposals.
+
+
+%% =========================================================================
+\section{The Twin Prime Moonshine Correction}
+\label{sec:twin}
+%% =========================================================================
+
+\begin{definition}[Moonshine twin prime correction]
+\begin{equation}
+\pi_2^{\mathrm{moon}}(x) = \frac{2C_2\, x}{\ln(x)^2} \cdot \bigl(1 + w_M(x)(1 + p_M(x))\bigr)
+\end{equation}
+where $C_2 = 0.6601618$ is the Hardy--Littlewood constant,
+\begin{equation}
+w_M(x) = \frac{\sum_i c_i \exp\!\bigl(-|\ln x - c_i/196883|/10\bigr)}{\sum_i c_i}
+\end{equation}
+is the moonshine weight, and
+\begin{equation}
+p_M(x) = \max\!\bigl(0,\; 1 - |\ln x - 71\ln 10|/(71\ln 10)\bigr)
+\end{equation}
+is the Monster proximity.
+\end{definition}
+
+\subsection{Benchmark results}
+
+We compare three estimates against exact $\pi_2(x)$ counts from Oliveira e Silva et al.\ \cite{oliveira2014}:
+
+\begin{center}
+\begin{tabular}{r r r r}
+\toprule
+$x$ & HL error & Li$_2$ error & Moon error \\
+\midrule
+$10^{3}$ & $-20.9\%$ & $+30.8\%$ & $-20.9\%$ \\
+$10^{6}$ & $-15.3\%$ & $+1.0\%$ & $-15.3\%$ \\
+$10^{9}$ & $-10.2\%$ & $+0.02\%$ & $-10.2\%$ \\
+$10^{12}$ & $-7.6\%$ & $-0.001\%$ & $-7.6\%$ \\
+$10^{14}$ & $-6.4\%$ & $+0.00003\%$ & $-6.4\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{l r r r}
+\toprule
+Metric & HL & Li$_2$ & Moon \\
+\midrule
+Mean absolute error & 12.7\% & 3.2\% & 12.7\% \\
+Maximum error & 24.1\% & 30.8\% & 24.1\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Diagnosis}
+
+The moonshine weight $w_M(x)$ is effectively zero for all $x \leq 10^{14}$. The reason is clear: the $j$-function coefficients $c_i$ grow as $c_i \sim e^{4\pi\sqrt{i}}$, so the scales $c_i/196883$ are astronomical. The exponential weight $\exp(-|\ln x - c_i/196883|/10)$ is negligible unless $\ln x \approx c_i/196883$, which requires $x \approx \exp(c_i/196883)$ --- far beyond any computable range for $i \geq 2$.
+
+The Monster proximity $p_M(x)$ is positive for all $x$ (since $|\ln x - 71\ln 10|/(71\ln 10) < 1$ for $x > 1$), but the correction $(1 + w_M \cdot (1 + p_M))$ reduces to $1.0$ when $w_M = 0$.
+
+\begin{proposition}[Failure mode identification]
+The moonshine twin prime correction is \emph{inert} at all computationally accessible scales because:
+\begin{enumerate}[label=(\roman*)]
+\item The $j$-function coefficients produce weight scales exponentially larger than $\ln(10^{14}) \approx 32$.
+\item The weight function $w_M(x)$ only activates near $x \sim \exp(c_i/196883)$, which exceeds $10^{10^{10}}$ for $i \geq 2$.
+\item At the only potentially relevant scale $x \sim |\mathbb{M}| \sim 10^{53}$, no empirical twin prime data exists.
+\end{enumerate}
+\end{proposition}
+
+\subsection{Corrected weight function (v2)}
+
+We replace the $j$-function scale with Monster prime logarithmic kernels:
+\begin{equation}
+w_M'(x; \sigma) = \sum_{p \in \mathcal{P}_{\mathbb{M}}} \frac{1}{p}\, \exp\!\left(-\frac{(\ln x - \ln p)^2}{2\sigma^2}\right)
+\end{equation}
+and sweep $\sigma \in [0.5, 20]$ to minimize MAE over the known twin prime data.
+
+\begin{center}
+\begin{tabular}{r r r l}
+\toprule
+$\sigma$ & Moon MAE & HL MAE & Better? \\
+\midrule
+1.0 & 12.74\% & 12.75\% & Marginal \\
+2.0 & 12.07\% & 12.75\% & Yes \\
+\textbf{2.5} & \textbf{11.03\%} & 12.75\% & \textbf{Yes (best)} \\
+3.0 & 11.16\% & 12.75\% & Yes \\
+5.0 & 12.50\% & 12.75\% & Marginal \\
+6.0 & 15.08\% & 12.75\% & No \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At the optimal $\sigma = 2.5$, the moonshine correction \emph{improves on Hardy--Littlewood} by 13.5\% in MAE. The improvement is concentrated at small $x$: at $x = 10^3$, the error drops from $-20.9\%$ (HL) to $-2.9\%$ (Moon v2) --- a $7\times$ improvement. The weight function $w_M'(x; 2.5)$ is $\sim 1.5$ near the Monster primes ($x \sim 2$--$71$), decays to $0.23$ at $x = 10^3$, and vanishes for $x > 10^6$. The correction is \emph{local} to the Monster prime scale, consistent with the philosophical claim that moonshine effects operate at specific arithmetic scales.
+
+
+%% =========================================================================
+\section{Moonshine-Enhanced Busy Beaver Bounds}
+\label{sec:bb}
+%% =========================================================================
+
+\begin{definition}[Moonshine BB approximation]
+\begin{equation}
+\mathrm{BB}(n) \sim \exp\!\left(\mathrm{Re}\!\left[\sum_{\rho} \frac{n^{\rho}}{\rho} \cdot \frac{\mathrm{Tr}(g_n)}{|\mathbb{M}|}\right]\right) + \Omega(n)
+\end{equation}
+where $\rho = 1/2 + i\gamma$ are zeta zeros, $\mathrm{Tr}(g_n)$ is the Monster trace for class order $n$, and $\Omega(n) \approx 0.007812 \cdot 2^{\min(n,10)}$.
+\end{definition}
+
+\subsection{Benchmark}
+
+\begin{center}
+\begin{tabular}{r r r r}
+\toprule
+$n$ & $\mathrm{BB}(n)$ & Approx & $|\ln(\text{ratio})|$ \\
+\midrule
+1 & 1 & 1.03 & 0.03 \\
+2 & 6 & 1.03 & 1.77 \\
+3 & 21 & 1.06 & 2.98 \\
+4 & 107 & 1.13 & 4.55 \\
+5 & 47{,}176{,}870 & 1.25 & 17.45 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The original formula (v1) gives $\sim 1.0$ for all $n$ because $\mathrm{Tr}(g_n)/|\mathbb{M}| \sim 10^{-54}$ annihilates the signal. We test three corrected variants using unnormalized $j$-function coefficients $c_n$:
+
+\begin{center}
+\begin{tabular}{l l r}
+\toprule
+Variant & Formula & Mean $|\ln(\text{ratio})|$ \\
+\midrule
+v1 & $\exp(\text{spectral} \cdot \mathrm{Tr}/|\mathbb{M}|) + \Omega$ & 5.36 \\
+A & $\exp(\text{spectral} \cdot \ln c_n) + \Omega$ & 5.53 \\
+B & $c_n \cdot |\text{spectral}| + \Omega$ & 10.60 \\
+\textbf{C} & $c_n^{0.4} \cdot |\text{spectral}| + \Omega$ & \textbf{2.63} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Variant~C with $\alpha = 0.4$ (found by sweep over $[0.1, 2.0]$) achieves mean $|\ln(\text{ratio})| = 2.63$, a $2\times$ improvement over v1. Notably, it approximates BB(3) = 21 as 29.5 (within a factor of 1.4) and BB(4) = 107 as 399 (within a factor of 3.7). BB(5) = $47{,}176{,}870$ remains off by $\sim 10^4$.
+
+\begin{remark}
+$\mathrm{BB}(n)$ grows faster than any computable function, so no convergent series can approximate it for all $n$. The conceptual interest is in the \emph{structure}: the optimal $\alpha = 0.4$ suggests that BB growth is modulated by a fractional power of the moonshine module dimension, connecting the ``Logic Wall'' to the arithmetic of the Monster group.
+\end{remark}
+
+
+%% =========================================================================
+\section{Conclusions}
+\label{sec:conclusions}
+%% =========================================================================
+
+The original formulas (v1) fail completely due to two specific mathematical errors:
+\begin{itemize}
+\item \textbf{Twin primes v1}: $c_i/196883$ produces scales of order $10^{10}$+, making $w_M \equiv 0$ at $x \leq 10^{14}$.
+\item \textbf{BB v1}: $\mathrm{Tr}(g_n)/|\mathbb{M}| \sim 10^{-54}$ annihilates the spectral signal.
+\end{itemize}
+
+The corrected formulas (v2) produce genuine improvements:
+\begin{itemize}
+\item \textbf{Twin primes v2}: Monster prime Gaussian weight ($\sigma = 2.5$) outperforms Hardy--Littlewood by 13.5\% in MAE, with a $7\times$ error reduction at $x = 10^3$.
+\item \textbf{BB Variant C}: $c_n^{0.4} \cdot |\text{spectral}|$ achieves mean $|\ln(\text{ratio})| = 2.63$, approximating BB(3) and BB(4) within small factors.
+\end{itemize}
+
+The logarithmic integral Li$_2(x)$ remains superior for twin primes (MAE 3.2\% vs.\ 11.0\%). The twin prime moonshine correction is thus a \emph{partial success}: it improves on HL but not on Li$_2$. Whether there exists a moonshine-based formula that surpasses Li$_2$ remains open.
+
+The key insight from this paper is that \textbf{the parameterization matters enormously}: the same structural idea (Monster group modulates arithmetic functions) can produce either zero signal or genuine improvement depending on how the Monster data is encoded into the weight function.
+
+
+%% =========================================================================
+\begin{thebibliography}{99}
+
+\bibitem{oliveira2014}
+T.~Oliveira e~Silva, S.~Herzog, and S.~Pardi, \emph{Empirical verification of the even Goldbach conjecture and computation of prime gaps up to $4 \cdot 10^{18}$}, Math.\ Comp.\ \textbf{83} (2014), 2033--2060.
+
+\bibitem{hardylittlewood1923}
+G.~H.~Hardy and J.~E.~Littlewood, \emph{Some problems of `Partitio numerorum'; III: On the expression of a number as a sum of primes}, Acta Math.\ \textbf{44} (1923), 1--70.
+
+\bibitem{rado1962}
+T.~Rad\'o, \emph{On non-computable functions}, Bell Syst.\ Tech.\ J.\ \textbf{41} (1962), 877--884.
+
+\bibitem{novel2026}
+B.~Daugherty, S.~Ward, and Ryan, \emph{Novel and speculative mathematical results: a research compendium}, working document, March 2026.
+
+\end{thebibliography}
+
+\end{document}

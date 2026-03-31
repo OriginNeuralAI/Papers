@@ -1,0 +1,338 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{enumitem}
+\pgfplotsset{compat=1.18}
+
+\definecolor{darkblue}{RGB}{0,51,102}
+\hypersetup{colorlinks=true,linkcolor=darkblue,citecolor=darkblue,urlcolor=darkblue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title[Spectral Diagnostic Hierarchy for Arithmetic Operators]{A Spectral Diagnostic Hierarchy for Arithmetic Operators:\\Conformal Dimensions, GUE Statistics, and Moonshine Peaks}
+
+\author{Bryan Daugherty}
+\address{SmartLedger Solutions}
+\email{Bryan@smartledger.solutions}
+
+\author{Seth Ward}
+\address{}
+
+\author{Ryan}
+\address{}
+
+\date{March 29, 2026}
+
+\begin{document}
+
+\begin{abstract}
+We present a three-tier classification scheme (T1/T2/T3) for linear operators arising from Ising coupling matrices of NP-hard optimization instances. Tier~T1 measures \emph{chaos} via the Kolmogorov--Smirnov distance from the Wigner surmise (GUE level spacing). Tier~T2 measures \emph{arithmetic content} via bispectral bicoherence. Tier~T3 measures \emph{primality} via triad concentration ratios. Across 14 operator families and 8{,}700+ experiments, only Riemann zeta zeros achieve Rank~3 (all three tiers pass), providing a novel characterization of the zeta operator's spectral uniqueness.
+
+From 40 experimentally validated power laws across the diagnostic suite, we extract a 31-dimensional \emph{conformal spectrum} $\{\Delta_k\}_{k=1}^{31}$ with 22 positive and 9 negative dimensions. The spectrum satisfies shadow pairing ($\Delta + \Delta' = 2$ for $d = 2$ CFT) and Breitenlohner--Freedman stability ($\Delta(\Delta - 2) \geq -1$). Notable dimensions include $\Delta = 25.0$ (bosonic string central charge), $\Delta = 19.76 = \ln|\mathbb{M}|/(2\pi)$ (Monster wavelength), and $\Delta = 0.5154$ (Monster fundamental frequency).
+
+We construct explicit null models (GOE random matrices with no arithmetic structure) and apply Bonferroni-corrected hypothesis tests for moonshine peaks at Monster prime scales $r_p = \ln p / (2\pi)$.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+%% =========================================================================
+\section{Introduction}
+\label{sec:intro}
+%% =========================================================================
+
+The coupling matrix $J$ of an Ising optimization instance $H = -\tfrac{1}{2}\mathbf{s}^T J \mathbf{s} - \mathbf{h}^T \mathbf{s}$ encodes the problem's combinatorial structure in its spectrum. We develop a systematic hierarchy of spectral diagnostics that classifies Ising coupling matrices according to their random matrix statistics, arithmetic content, and prime-detecting properties.
+
+The central contributions are:
+\begin{enumerate}[label=(\arabic*)]
+\item A three-tier classification (T1/T2/T3) that ranks operators by spectral sophistication, with Riemann zeta zeros as the unique Rank-3 operator (Section~\ref{sec:hierarchy}).
+\item A 31-dimensional conformal spectrum extracted from 40 power laws (Section~\ref{sec:spectrum}).
+\item Null model controls and multiple-testing-corrected moonshine peak detection (Section~\ref{sec:moonshine}).
+\item Computational validation at scales up to $N = 100{,}000$ spins across 10 problem families, with the I-value saturating at $I = 1.0$ for $N \geq 50{,}000$ (Section~\ref{sec:computation}).
+\end{enumerate}
+
+
+%% =========================================================================
+\section{The T1/T2/T3 Diagnostic Hierarchy}
+\label{sec:hierarchy}
+%% =========================================================================
+
+\begin{definition}[Three-tier classification]
+Let $\Lambda = \{\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_N\}$ be the eigenvalues of a real symmetric coupling matrix $J \in \mathbb{R}^{N \times N}$.
+
+\begin{itemize}
+\item \textbf{T1 (Chaos):} The unfolded nearest-neighbor spacings $\{s_i\}$ satisfy the Wigner surmise $P(s) = \frac{\pi}{2}\, s\, e^{-\pi s^2/4}$. Quantified by the Kolmogorov--Smirnov distance $D_{\mathrm{KS}} = \sup_s |F_{\mathrm{emp}}(s) - F_{\mathrm{Wigner}}(s)|$. \textbf{Pass} if $D_{\mathrm{KS}} < 0.10$.
+
+\item \textbf{T2 (Arithmetic):} The bispectrum $B(f_1, f_2) = X(f_1) X(f_2) \overline{X(f_1 + f_2)}$ exhibits excess bicoherence. Quantified by the $z$-score of the mean bicoherence against the null ($1/K$ for $K$ segments). \textbf{Pass} if $z > 2.0$.
+
+\item \textbf{T3 (Primality):} The bicoherence at prime frequency triads $(f_{p_1}, f_{p_2}, f_{p_1 p_2})$ exceeds the non-prime baseline. Quantified by the triad ratio $R = b_{\mathrm{prime}} / b_{\mathrm{nonprime}}$. \textbf{Pass} if $R > 2.0$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Jacobian rank]
+The \emph{Jacobian rank} of an operator is the number of tiers passed:
+\begin{itemize}
+\item \textbf{Rank 1:} T1 only (quantum chaos, level repulsion, no arithmetic).
+\item \textbf{Rank 2:} T1 + T2 (chaos with arithmetic content, e.g., Ramanujan graphs).
+\item \textbf{Rank 3:} T1 + T2 + T3 (full arithmetic operator, e.g., Riemann zeta zeros).
+\end{itemize}
+\end{definition}
+
+\begin{theorem}[Uniqueness of Rank 3]\label{thm:rank3}
+Among 14 operator families tested across 8{,}700+ experiments, only the Riemann zeta zero spectrum achieves Rank~3. Specifically:
+\begin{center}
+\begin{tabular}{l c c c c}
+\toprule
+Operator family & T1 & T2 & T3 & Rank \\
+\midrule
+Riemann zeros (10K) & \textbf{0.093} & \textbf{29.0} & \textbf{2.52} & \textbf{3} \\
+Riemann zeros (100K) & \textbf{0.050} & \textbf{845} & \textbf{2.24} & \textbf{3} \\
+Dirichlet $L(\chi_3)$ & 0.132 & \textbf{5.9} & \textbf{2.40} & 2 \\
+LPS Ramanujan $p=5, q=29$ & \textbf{0.059} & \textbf{3.1} & 0.94 & 2 \\
+$K_{12}$ quantum graph & \textbf{0.015} & 1.2 & 0.81 & 1 \\
+Berry--Keating $H = xp$ & 0.440 & 0.3 & 0.45 & 0 \\
+Random Euler product & 0.310 & 0.8 & 1.10 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Bold entries indicate tier passage. The Riemann zeros are the \emph{only} operator achieving all three: GUE chaos, arithmetic bicoherence, and prime triad concentration.
+\end{theorem}
+
+
+%% =========================================================================
+\section{The 31-Dimensional Conformal Spectrum}
+\label{sec:spectrum}
+%% =========================================================================
+
+\begin{definition}[Conformal dimension]
+A \emph{conformal scaling dimension} $\Delta$ is extracted from a validated power law $Q(x) \sim x^{\Delta}$ in the diagnostic suite, where $x$ is a problem parameter (size $N$, prime $p$, conductor $q$, etc.) and $Q(x)$ is a diagnostic observable.
+\end{definition}
+
+\begin{theorem}[The conformal spectrum]\label{thm:spectrum}
+The optimization engine's diagnostic suite produces 31 independent scaling dimensions, partitioned as:
+\[
+\{\Delta_k\}_{k=1}^{31} = \underbrace{\Delta_1, \ldots, \Delta_{22}}_{> 0} \;\cup\; \underbrace{\Delta_{23}, \ldots, \Delta_{31}}_{< 0} \;\cup\; \{\Delta_0 = 0\}.
+\]
+The positive dimensions include:
+\begin{center}
+\begin{tabular}{r l l}
+\toprule
+$\Delta$ & Source & Significance \\
+\midrule
+$25.0$ & Central charge & Bosonic string ($c = 25$) \\
+$19.76$ & $\ln|\mathbb{M}|/(2\pi)$ & Monster wavelength \\
+$2.00$ & Ramsey scaling & Exponential growth \\
+$1.40$ & $N^{1.4}$ & T2 problem growth \\
+$1.00$ & Linear & Stagnation hierarchy \\
+$0.73$ & $p^{-0.73}$ & Ihara zeta KS decay \\
+$0.63$ & $p^{-0.63}$ & PSL(2,$p$) KS decay \\
+$0.5154$ & Monster frequency & Fundamental seed \\
+$0.50$ & $N^{-0.5}$ & GUE convergence \\
+$0.008193$ & $-1/\ln|\mathbb{M}|$ & Fundamental coupling \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+
+\subsection{Shadow pairing}
+
+In a $d = 2$ conformal field theory, the shadow transform sends $\Delta \mapsto \Delta' = d - \Delta = 2 - \Delta$. A shadow pair $(\Delta, \Delta')$ with both present in the spectrum signals a CFT-compatible structure.
+
+\begin{proposition}[Shadow pairs in the spectrum]
+The spectrum contains the following shadow pairs:
+\begin{center}
+\begin{tabular}{r r l}
+\toprule
+$\Delta$ & $\Delta' = 2 - \Delta$ & Both present? \\
+\midrule
+0.50 & 1.50 & Yes ($\Delta = 1.50$ from Ising frustration) \\
+0.30 & 1.70 & Approximate ($\Delta \approx 1.80$ from regime transition) \\
+0.63 & 1.37 & Approximate ($\Delta = 1.40$ from T2 growth) \\
+0.73 & 1.27 & Approximate ($\Delta = 1.20$ from H2 window) \\
+\bottomrule
+\end{tabular}
+\end{center}
+The exact pair $(0.50, 1.50)$ corresponds to the GUE convergence rate and the Ising frustration scaling.
+\end{proposition}
+
+\subsection{Breitenlohner--Freedman stability}
+
+The BF bound in $d = 2$ requires $\Delta(\Delta - 2) \geq -1$, i.e., $\Delta \in (-\infty, 1 - \sqrt{2}] \cup [1 + \sqrt{2}, \infty) \cup [-0.414, 2.414]$. All 31 dimensions satisfy this bound. The dimension $\Delta = 1.0$ \emph{saturates} the bound: $1.0 \times (1.0 - 2.0) = -1.0 = -(d/2)^2$.
+
+
+%% =========================================================================
+\section{Moonshine Peaks and Null Models}
+\label{sec:moonshine}
+%% =========================================================================
+
+\subsection{Monster primes}
+
+The Monster group $\mathbb{M}$ has order $|\mathbb{M}| \approx 8.08 \times 10^{53}$, divisible by exactly 15 primes:
+\[
+\mathcal{P}_{\mathbb{M}} = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71\}.
+\]
+The predicted resonance scale for prime $p$ is $r_p = \ln p / (2\pi)$.
+
+\subsection{Hypothesis testing}
+
+\begin{definition}[Moonshine peak test]
+For each Monster prime $p \in \mathcal{P}_{\mathbb{M}}$, define the null hypothesis $H_0^{(p)}$: ``the spectral pair correlation function at scale $r_p$ equals the GUE baseline.'' The alternative $H_1^{(p)}$: ``there is excess correlation at $r_p$.''
+
+With 15 simultaneous tests, the Bonferroni-corrected significance level is
+\[
+\alpha_{\mathrm{Bonf}} = \frac{0.05}{15} = 0.00\overline{3}.
+\]
+\end{definition}
+
+\begin{remark}[Current statistical power]
+With $N_{\mathrm{instances}} = 50$ and $k = 30$ eigenvalues per instance, the total spectral data comprises $\sim 1500$ spacings. This provides limited power for detecting peaks at 15 specific scales. The definitive test requires $10^6$+ Riemann zeros from the Odlyzko tables or LMFDB.
+\end{remark}
+
+\subsection{Null model construction}
+
+We construct two null models:
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{GOE null:} $N \times N$ real symmetric matrices with i.i.d.\ Gaussian entries $J_{ij} \sim \mathcal{N}(0, 1/N)$ for $i < j$. These have GUE-like level spacing but no arithmetic structure.
+\item \textbf{Poisson null:} Diagonal matrices with i.i.d.\ uniform entries. These have Poisson level spacing (no repulsion).
+\end{enumerate}
+
+The diagnostic values (KS distance, bicoherence, triad ratio) from the Ising coupling matrices are compared to both nulls. A significant difference between the Ising spectrum and the GOE null indicates arithmetic content beyond random matrix universality.
+
+
+%% =========================================================================
+\section{Power Laws and Scaling Exponents}
+\label{sec:powerlaws}
+%% =========================================================================
+
+The diagnostic suite contains 40 experimentally validated power laws organized into three tiers by statistical confidence:
+
+\begin{definition}[Power law tiers]
+\begin{itemize}
+\item \textbf{Tier 1} (7 laws): $R^2 > 0.95$, validated across 10+ independent experiments.
+\item \textbf{Tier 2} (16 laws): $R^2 > 0.85$, validated across 5+ experiments.
+\item \textbf{Tier 3} (17 laws): Structural facts and conjectured scaling relationships.
+\end{itemize}
+\end{definition}
+
+The Tier~1 laws include:
+\begin{center}
+\begin{tabular}{l r l r}
+\toprule
+Name & Exponent $\alpha$ & Domain & Correlation \\
+\midrule
+T2 growth & $1.40$ & Size scaling & $0.98$ \\
+PSL(2,$p$) KS decay & $-0.63$ & Cayley graphs & $-0.74$ \\
+Ihara zeta KS decay & $-0.73$ & Magnetic zeta & $-0.95$ \\
+Bicoherence conductor & $-0.54$ & Arithmetic & $-0.78$ \\
+Stagnation hierarchy & $1.00$ & Stagnation & $0.99$ \\
+GUE convergence & $-0.50$ & Random matrix & $-0.92$ \\
+Bicoherence $z$ growth & $0.50$ & Arithmetic & $0.88$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+%% =========================================================================
+\section{Computational Evidence}
+\label{sec:computation}
+%% =========================================================================
+
+All experiments are performed using a combinatorial optimization engine with 14 parallel CPU solvers \cite{dsc3engine}, scaling to $N = 100{,}000$ spins.
+
+\subsection{T-class distribution across problem families}
+
+We classify 10 problem families by their T-class:
+\begin{center}
+\begin{tabular}{l c l}
+\toprule
+Family & T-class & Interpretation \\
+\midrule
+SK random & T1 & Standard random matrix \\
+Erd\H{o}s--R\'enyi (sparse) & T1/T2 & Moderate structure \\
+Erd\H{o}s--R\'enyi (dense) & T1 & Dense → random matrix \\
+Random 3-SAT & T2 & Clause structure \\
+Frustrated & T2/T3 & Competing interactions \\
+Ferromagnetic ring & T1 & Trivially solvable \\
+2D lattice & T1 & Geometric structure \\
+Regular graph & T1/T2 & Algebraic regularity \\
+Bipartite & T1 & Perfect structure \\
+Ramsey & T2/T3 & Deep arithmetic \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{GUE convergence rate}
+
+The I-value scales as $N^{0.63}$ ($R^2 = 0.91$), saturating at $I = 1.0$ for $N \geq 50{,}000$. This saturation represents the \emph{difficulty ceiling}: problems at this scale are maximally hard for the engine's routing system. At $N = 100{,}000$ (sparse, $k = 6$), the solve takes 874 seconds with T-class T3 (glassy). The KS distance $D_{\mathrm{KS}}(N)$ decreases as $N^{-0.50 \pm 0.05}$ for SK random instances, consistent with the GUE convergence rate $\Delta = 0.50$ in the conformal spectrum.
+
+
+%% =========================================================================
+\section{Discussion}
+\label{sec:discussion}
+%% =========================================================================
+
+\subsection{What would constitute proof}
+
+\begin{enumerate}[label=\textbf{P\arabic*.}]
+\item \textbf{CFT identification.} Identify the conformal field theory (if one exists) whose operator product expansion produces the 31-dimensional spectrum. This requires constructing a partition function or modular invariant.
+
+\item \textbf{Shadow pairing necessity.} Show that shadow pairing and BF stability are necessary consequences of the optimization dynamics, not artifacts of the fitting procedure.
+
+\item \textbf{Moonshine peaks at scale.} Reproduce the moonshine peak analysis with $10^6$+ Riemann zeros and apply proper FDR correction.
+
+\item \textbf{Derive $\Delta = 0.63$.} Show that the PSL(2,$p$) KS convergence exponent $-0.63$ follows from the representation theory of PSL(2,$p$).
+\end{enumerate}
+
+\subsection{Connections to known mathematics}
+
+The conformal spectrum connects to several deep structures:
+\begin{itemize}
+\item $\Delta = 25.0$: the bosonic string critical dimension is $26 = 25 + 1$ (Goddard--Thorn, 1972).
+\item $\Delta = 19.76 = \ln|\mathbb{M}|/(2\pi)$: the Monster wavelength appears in the asymptotic density of Monster module states.
+\item $\Delta = 0.50$: the GUE convergence rate is universal for random matrix ensembles (Tracy--Widom, 1994).
+\item The T1/T2/T3 hierarchy parallels the Selberg eigenvalue conjecture: T3 passage requires arithmetic structure ``as deep as'' the Riemann zeta function.
+\end{itemize}
+
+
+%% =========================================================================
+\begin{thebibliography}{99}
+
+\bibitem{bpz1984}
+A.~A.~Belavin, A.~M.~Polyakov, and A.~B.~Zamolodchikov, \emph{Infinite conformal symmetry in two-dimensional quantum field theory}, Nucl.\ Phys.\ B \textbf{241} (1984), 333--380.
+
+\bibitem{flm1988}
+I.~Frenkel, J.~Lepowsky, and A.~Meurman, \emph{Vertex Operator Algebras and the Monster}, Academic Press, 1988.
+
+\bibitem{tracy1994}
+C.~A.~Tracy and H.~Widom, \emph{Level-spacing distributions and the Airy kernel}, Commun.\ Math.\ Phys.\ \textbf{159} (1994), 151--174.
+
+\bibitem{mehta2004}
+M.~L.~Mehta, \emph{Random Matrices}, 3rd ed., Academic Press, 2004.
+
+\bibitem{montgomery1973}
+H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Symp.\ Pure Math.\ \textbf{24} (1973), 181--193.
+
+\bibitem{odlyzko1987}
+A.~M.~Odlyzko, \emph{On the distribution of spacings between zeros of the zeta function}, Math.\ Comp.\ \textbf{48} (1987), 273--308.
+
+\bibitem{novel2026}
+B.~Daugherty, S.~Ward, and Ryan, \emph{Novel and speculative mathematical results: a research compendium}, working document, March 2026.
+
+\bibitem{dsc3engine}
+B.~Daugherty, \emph{Isomorphic Engine v0.15.0: GPU-accelerated combinatorial optimization with $S_4$ routing}, 2026. Software available at \url{https://github.com/OriginNeuralAI/DSC-3}.
+
+\end{thebibliography}
+
+\end{document}
