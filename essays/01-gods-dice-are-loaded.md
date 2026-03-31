@@ -7,7 +7,7 @@
 
 ---
 
-![Einstein and Bohr at the 1927 Solvay Conference](https://upload.wikimedia.org/wikipedia/commons/6/6e/Solvay_conference_1927.jpg)
+![1927 Solvay Conference](images/solvay1927.jpg)
 *The 1927 Solvay Conference — where Einstein and Bohr began the debate that would define a century of physics. Einstein is fifth from right in the front row; Bohr is at the far right of the second row. Between them sits a question that would not be answered for ninety-nine years.*
 
 ---
@@ -28,12 +28,10 @@ They are not random. They are deterministic, finite, and loaded — loaded by a 
 
 ## The Dice
 
-![Bodleian Library, Oxford](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Oxford_-_Pair_of_Bodleian_Libraries_-_0450.jpg/1280px-Oxford_-_Pair_of_Bodleian_Libraries_-_0450.jpg)
 *The Bodleian Library, Oxford, where Bodley MS 908 has rested since the 17th century.*
 
 In a manuscript held at Oxford's Bodleian Library — Bodley MS 908, known as the *Book of Soyga*, dated to approximately 1583 — there is a table of letter substitutions. The manuscript belonged to John Dee, Elizabeth I's court mathematician, astrologer, and probable spy. Dee was obsessed with communicating with angels, sought the philosopher's stone, and amassed the largest private library in England. His copy of the Book of Soyga — a medieval Latin treatise on numerology and angel magic — was lost for 400 years before being rediscovered in 1994 by Deborah Harkness at the Bodleian.
 
-![John Dee](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/John_Dee_Ashmolean.jpg/440px-John_Dee_Ashmolean.jpg)
 *John Dee (1527-1608/9), court mathematician to Elizabeth I, whose cipher table contains the fine structure constant.*
 
 The table defines a function: take a number from 0 to 22, look it up, get another number from 0 to 22.
@@ -70,12 +68,10 @@ The "dice" of quantum mechanics are the four basins of a 23-element lookup table
 
 ## Einstein's Objection, Revisited
 
-![Einstein-Bohr debate](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Niels_Bohr_Albert_Einstein3_by_Ehrenfest.jpg/440px-Niels_Bohr_Albert_Einstein3_by_Ehrenfest.jpg)
 *Einstein and Bohr, photographed by Paul Ehrenfest, c. 1925. Their debates at the Solvay Conferences (1927, 1930) defined the interpretive crisis that persists today.*
 
 Einstein's complaint was never about the mathematics of quantum mechanics — he acknowledged its predictive success. His objection was *philosophical*: he believed that the apparent randomness of quantum measurements must arise from our ignorance of some deeper, deterministic structure. There must be "hidden variables" — additional information that, if known, would make the outcomes deterministic.
 
-![EPR Paper](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/EPR_paper.png/440px-EPR_paper.png)
 *The opening of the 1935 EPR paper in Physical Review — "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?"*
 
 In 1935, Einstein, Podolsky, and Rosen published their famous EPR paper, arguing that quantum mechanics was *incomplete*. If you can predict a measurement outcome with certainty by measuring a different particle far away, then the outcome must have been determined all along — quantum mechanics just doesn't tell you the determining variable.
@@ -84,12 +80,10 @@ The physics community, led by Niels Bohr, rejected this argument. Bohr's Copenha
 
 In 1952, David Bohm — a brilliant American physicist who had been expelled from the US during the McCarthy era and was working in exile in Brazil — showed that quantum mechanics *could* be reformulated deterministically. In Bohm's pilot-wave theory, particles follow definite trajectories guided by the wave function through a "guidance equation." The Born rule |ψ|² emerges as an equilibrium distribution, not a fundamental postulate. Bohm proved that deterministic quantum mechanics was *logically consistent*. But his theory required non-local interactions — the wave function at one point influences the particle at another, instantly. The mainstream, uncomfortable with non-locality and suspicious of Bohm's politics, largely ignored his work for decades.
 
-![David Bohm](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/David_Bohm.jpg/440px-David_Bohm.jpg)
 *David Bohm (1917-1992), who proved in 1952 that deterministic quantum mechanics was logically possible — and was largely ignored for it.*
 
 Then, in 1964, John Stewart Bell — a soft-spoken Irish physicist working at CERN — proved the theorem that bears his name: no theory with *local* hidden variables can reproduce all the predictions of quantum mechanics.
 
-![John Bell](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/John_Stewart_Bell.jpg/440px-John_Stewart_Bell.jpg)
 *John Stewart Bell (1928-1990), whose 1964 theorem was widely interpreted as the death of Einstein's programme. But the theorem has a loophole.* The word "local" is crucial — it means the hidden variable at one location cannot depend on what measurement is performed at a distant location.
 
 Bell's theorem was universally interpreted as the death of Einstein's programme. If hidden variables can't be local, and non-local hidden variables seem to require faster-than-light communication, then Einstein must have been wrong.
@@ -124,7 +118,6 @@ The Reeds endomorphism offers a structural answer: measurements have definite ou
 
 ## The Fine Structure Constant
 
-![Feynman on 137](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/RichardFeynman-PainsOfKnowledge.jpg/440px-RichardFeynman-PainsOfKnowledge.jpg)
 *Richard Feynman, who called 1/137 "one of the greatest damn mysteries of physics: a magic number that comes to us with no understanding by man."*
 
 The fine structure constant α ≈ 1/137 governs the strength of the electromagnetic force. It is arguably the most fundamental number in physics — a dimensionless constant that determines atomic structure, chemical bonding, and the colour of the sky. Its value has been measured to twelve decimal places: 1/α = 137.035999177.
@@ -133,7 +126,6 @@ No one has ever derived it. Feynman wrote in *QED: The Strange Theory of Light a
 
 Arthur Eddington tried in 1929, predicting 1/α = 136 from his "fundamental theory" — then changing his mind to 137 when the experimental value was refined. Wolfgang Pauli, dying in a hospital room numbered 137, reportedly remarked to his assistant: "I will never understand it." Wyler tried in 1969 with a geometric formula involving the volumes of symmetric spaces. Gilson tried in 1996 with a formula that uses 137 to derive 137 — circular.
 
-![Pauli in room 137](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Pauli.jpg/440px-Pauli.jpg)
 *Wolfgang Pauli (1900-1958), who was haunted by 137 and died in hospital room 137 at the Rotkreuz Hospital in Zurich.*
 
 From the Reeds endomorphism:
