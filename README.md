@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Papers-28-blue?style=for-the-badge" alt="Papers"/>
+  <img src="https://img.shields.io/badge/Papers-30-blue?style=for-the-badge" alt="Papers"/>
   <img src="https://img.shields.io/badge/Theorems-8-brightgreen?style=for-the-badge" alt="Theorems"/>
   <img src="https://img.shields.io/badge/Predictions-3%20derived-gold?style=for-the-badge" alt="Predictions"/>
   <img src="https://img.shields.io/badge/1%2F%CE%B1-9%20sig%20figs-red?style=for-the-badge" alt="Alpha"/>
@@ -9,7 +9,7 @@
 
 # The Daugherty-Ward-Ryan Research Papers
 
-> *Twenty-eight papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved) — all from the basin partition of a 500-year-old cipher table.*
+> *Thirty papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
 
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan
 **Affiliation:** SmartLedger Solutions / Origin Neural AI
@@ -30,7 +30,7 @@ The basin-force mapping is post-hoc but **uniquely determined** (0/94 alternativ
 
 ## The Central Idea
 
-All twenty-eight papers are connected by a single mathematical thread: the **universality constant**
+All thirty papers are connected by a single mathematical thread: the **universality constant**
 
 $$\Omega = \frac{\tau_{\text{macro}}}{\tau_{\text{micro}}} = \frac{3000}{125} = 24 = |S_4|$$
 
@@ -73,11 +73,13 @@ which appears independently across **eleven** mathematical structures:
 |:---:|-------|------------|:------:|
 | 02 | [**Ramsey Campaign R(5,5)–R(10,10)**](02-Ramsey-R55-Campaign/) | R(8,8) > 281; R(10,10) > 797 via GPU | ✅ Computed |
 | 03 | [**R(5,5) = 43 Structural Obstruction**](03-Ramsey-K43-Structural-Obstruction/) | Exhaustive 2¹⁴ enumeration; barrier > 4 flips | ✅ Computed |
+| 14 | [**Falsification of R(8,8) > 293**](14-Ramsey-R88-Falsification/) | R(8,8) > 293 **falsified**; R(8,8) > 281 confirmed; Zero-Core Theorem verified (2,480 constraints); **12/12 checks** | ✅ Proved |
 
 ### ⚙️ Optimization Theory
 
 | # | Title | Key Result | Status |
 |:---:|-------|------------|:------:|
+| 15 | [**Daugherty Uniqueness Theorem**](15-Variational-Uniqueness-c24/) | Five constraints force **c = 24** (unique); 670+ instances; D₄ triality; **12/12 checks** | ✅ Proved |
 | 17 | [**S₄ Stagnation Structure**](17-S4-Stagnation-Structure/) | Ω = 24.00 ± 0.00 across **60 measurements**; 1M spins in 259ms | ✅ Verified |
 | 18 | [**Spectral Diagnostic Hierarchy**](18-Spectral-Diagnostic-Hierarchy/) | 31-dim conformal spectrum; ζ zeros **uniquely Rank 3** | ✅ Computed |
 | 21 | [**Compression of Power**](21-Compression-of-Power/) | Computational power compression analysis | 📋 Analysis |
@@ -423,6 +425,8 @@ Major results from GPU-scale computation (RTX 5070 Ti):
 | **8/9 clustering** | N = 100–750 | Exact topological invariant, analytically proved | 23 |
 | **2-bit capacity** | log₂(4 basins) | Born rule = information capacity constraint | 23 |
 | **[9,7,1,6] unique** | algebraic determination | 0/94 alternatives at measured precision | 28 |
+| **R(8,8) > 293 falsified** | Bron-Kerbosch on K₂₉₃ | Red K₈ + Blue K₁₁ found; stochastic sampling covers 6.6×10⁻⁹ | 14 |
+| **c = 24 uniquely forced** | 5-constraint intersection | Stat mech + CFT + Ramsey + S₄ → singleton {24}; 670+ instances | 15 |
 
 See [FRONTIER_RESULTS.md](FRONTIER_RESULTS.md), [PHOTOSYNTHESIS_FINDING.md](PHOTOSYNTHESIS_FINDING.md), and [FINDINGS_SYNOPSIS.md](FINDINGS_SYNOPSIS.md) for complete data.
 
