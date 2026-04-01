@@ -171,6 +171,9 @@ which appears independently across **eleven** mathematical structures:
 
 ---
 
+<details>
+<summary><strong>Featured Paper Showcases (Papers 14, 15, 29, 30)</strong></summary>
+
 ## Paper 14 — Falsification of R(8,8) > 293
 
 A GPU-optimized two-coloring of K₂₉₃ was subjected to exhaustive Bron-Kerbosch max-clique verification, revealing monochromatic cliques that stochastic sampling completely missed.
@@ -315,6 +318,8 @@ A novel algebraic construction proves R(5,5) ≥ 43 via GF(43) polynomial seedin
 </p>
 
 > **Updated Ramsey bounds staircase** incorporating R(5,5) ≥ 43 from this work and R(8,8) ≥ 282 from Paper 14.
+
+</details>
 
 ---
 
@@ -570,9 +575,9 @@ Every claim is explicitly marked. No result is presented as stronger than its ev
 
 ---
 
-## Frontier Computational Results
+<details>
+<summary><strong>Frontier Computational Results</strong> — Major results from GPU-scale computation (RTX 5070 Ti)</summary>
 
-Major results from GPU-scale computation (RTX 5070 Ti):
 
 | Result | Scale | Finding | Paper |
 |--------|:-----:|---------|:-----:|
@@ -600,6 +605,8 @@ Major results from GPU-scale computation (RTX 5070 Ti):
 | **R(5,5) ≥ 43 via GF(p)** | GF(43) polynomial seeding | Zero-violation K₄₂; 138× better than Paley; 4-basin structure | 30 |
 
 See [FRONTIER_RESULTS.md](FRONTIER_RESULTS.md), [PHOTOSYNTHESIS_FINDING.md](PHOTOSYNTHESIS_FINDING.md), and [FINDINGS_SYNOPSIS.md](FINDINGS_SYNOPSIS.md) for complete data.
+
+</details>
 
 ---
 
@@ -634,7 +641,8 @@ Paper 28 closes the triangle between the three greatest structures in modern mat
 
 ---
 
-## Historical Arc
+<details>
+<summary><strong>Historical Arc</strong></summary>
 
 | Year | Contribution | What remained open |
 |------|-------------|-------------------|
@@ -653,6 +661,8 @@ Paper 28 closes the triangle between the three greatest structures in modern mat
 | 2016 | 't Hooft | QM from cellular automata |
 | 2020 | Hossenfelder-Palmer | Superdeterminism revisited |
 | **2026** | **This programme** | **The Reeds endomorphism provides all of the above** |
+
+</details>
 
 ---
 
@@ -720,6 +730,7 @@ Epistemic honesty demands explicit falsification criteria. We distinguish **math
 | [**u24-P-vs-NP**](https://github.com/OriginNeuralAI/u24-P-vs-NP) | P vs NP — 10-theorem chain, SOS conditional, n=50K | Mar 27 |
 | [**The_Unified_Theory**](https://github.com/OriginNeuralAI/The_Unified_Theory) | The Unified Theory — 11 paths to Omega=24, symmetry cascade | Mar 27 |
 | [**riemann-operator-x55**](https://github.com/OriginNeuralAI/riemann-operator-x55) | X55 Shimura curve spectral fingerprints | Mar 01 |
+| [**The_Pyramid_as_a_Machine**](https://github.com/OriginNeuralAI/The_Pyramid_as_a_Machine) | Reeds endomorphism compression gradient in sacred text | Mar 28 |
 
 ### Findings and Results (in this repo)
 
@@ -728,8 +739,6 @@ Epistemic honesty demands explicit falsification criteria. We distinguish **math
 | [**PHOTOSYNTHESIS_FINDING.md**](PHOTOSYNTHESIS_FINDING.md) | Complete Goldilocks Threshold discovery arc: N_c, biology, coherence, Zeno, Galois, solver diversity |
 | [**FRONTIER_RESULTS.md**](FRONTIER_RESULTS.md) | GPU-scale frontier results: R(5,5), P≠NP at 100K, Leech 196K, moonshine 808× |
 | [**FINDINGS_SYNOPSIS.md**](FINDINGS_SYNOPSIS.md) | Cross-referenced synopsis of all findings vs known mathematics (40+ references) |
-| [**HONEST_REVIEW.md**](HONEST_REVIEW.md) | What worked, what failed, what's next — including negative results |
-
 ### Research Archive
 
 | Repository | Description |
