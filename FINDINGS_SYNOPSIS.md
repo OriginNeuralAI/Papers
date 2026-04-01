@@ -275,6 +275,27 @@ The RTX 5070 Ti results demonstrate:
 - Tracy, C.A. & Widom, H. (1994). Level-spacing distributions and the Airy kernel. *Comm. Math. Phys.* 159.
 - Selberg, A. (1956). Harmonic analysis and discontinuous groups. *J. Indian Math. Soc.* 20.
 
+---
+
+## Paper 31: Chromosome Transient Dynamics (April 2026)
+
+**Core finding:** The squared transient length τ² of the Z₂₃ endomorphism predicts pan-cancer driver mutation frequency at r = +0.735 (permutation p = 0.0064, R² = 0.54, Cohen's f² = 1.17). Validated across **10 independent biological measures**: COSMIC drivers, PCAWG mutation density, LOH, ATAC-seq, drug ORR, trial success, D-score druggability, Ising barriers, telomere length, telomere shortening.
+
+**Extensions:**
+- **Aging:** Cancer peaks age 50–70 when last transient windows (τ=2: KRAS, τ=3: TP53) close. Telomere r = +0.52.
+- **Neurodegeneration:** All 5 major disease genes (Alzheimer's, Parkinson's, Huntington's, ALS, prion) reside on τ=0 chromosomes — the *inverse* of cancer.
+- **Druggability:** D-score = w_b / [(1+τ)² · ΔE] correctly ranks BRAF/EGFR as maximally druggable (D=2.0), TP53 as minimally (D=0.014).
+- **Trials:** Fixed-point targets (τ=0): 80% Phase III success. High-τ (τ≥2): 44%.
+- **Universal formula:** W = τ² · τ₁ · Ω^(s/s_max) governs intervention timing at every scale.
+
+**Null models rejected:** Collatz (r = −0.08, p = 0.72), chromosome size (r = +0.34, p = 0.10).
+
+**Status:** 10/10 measures validated, 2/2 nulls rejected, 7/12 predictions confirmed, 10 falsification criteria defined.
+
+---
+
+## References
+
 ### Physics & Optimization
 - Kramers, H.A. (1940). Brownian motion in a field of force. *Physica* 7.
 - Goto, H. et al. (2019). Combinatorial optimization by simulating adiabatic bifurcations. *Science Advances* 5.

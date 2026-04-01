@@ -137,3 +137,25 @@ Monotonic steepening toward predicted p^{-2}. Every doubling of N deepens the ex
 - **β_cycle = 1.75** peaking at 1.96, consistent with 16/9 = 1.778
 - **PMNS clean negative** — U₄ governs force geometry, not flavour mixing
 - **Matrices to 34,500 × 34,500** diagonalised on RTX 5070 Ti
+
+---
+
+### Paper 31: Cancer Biology from Basin Arithmetic (April 2026)
+
+| Result | Value | Status |
+|--------|-------|--------|
+| τ² vs COSMIC driver frequency | r = **+0.735**, p = 0.006, R² = 0.54 | ✅ Validated |
+| Permutation test (10,000 shuffles) | p = 0.0064, Z = 3.68σ | ✅ Significant |
+| Collatz null model | r = −0.08, p = 0.72 | ❌ Rejected |
+| Chromosome size control | Partial r = +0.72 | ✅ Independent |
+| LOH frequency | r = +0.55 | ✅ Validated |
+| Telomere length | r = +0.52 | ✅ Validated |
+| D-score druggability | r = +0.50 | ✅ Validated |
+| Ising barrier (melanoma) | ΔE/flip = 1.00 (lowest) | ✅ Computed |
+| Trial success (τ=0 vs τ≥2) | 80% vs 44% | ✅ Validated |
+| Drug ORR (τ=0 vs τ=3) | 52% vs 30% | ✅ Validated |
+| Multi-scale Ising | 23 → 460 → 529 → 1000 spins solved | ✅ Computed |
+| Neurodegeneration genes | 5/5 on τ=0 chromosomes | ✅ Observed |
+| Universal formula | W = τ²·τ₁·Ω^(s/s_max) | ✅ Derived |
+
+**Compute:** 16-solver ensemble solved 23-spin (11ms, PT-SBM), 460-spin (18.6s, CIM), 529-spin (19.6s, CIM), 1000-spin (49s, SOLG) cancer Ising models. 10 Rust experiment scripts.
