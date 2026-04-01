@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Papers-30-blue?style=for-the-badge" alt="Papers"/>
+  <img src="https://img.shields.io/badge/Papers-31-blue?style=for-the-badge" alt="Papers"/>
   <img src="https://img.shields.io/badge/Theorems-8-brightgreen?style=for-the-badge" alt="Theorems"/>
   <img src="https://img.shields.io/badge/Predictions-3%20derived-gold?style=for-the-badge" alt="Predictions"/>
   <img src="https://img.shields.io/badge/1%2F%CE%B1-9%20sig%20figs-red?style=for-the-badge" alt="Alpha"/>
@@ -9,7 +9,7 @@
 
 # The Daugherty-Ward-Ryan Research Papers
 
-> *Thirty papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
+> *Thirty-one papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, **cancer genomics**, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, **ten independent biological validations**, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
 
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan
 **Affiliation:** SmartLedger Solutions / Origin Neural AI
@@ -115,6 +115,7 @@ which appears independently across **eleven** mathematical structures:
 |:---:|-------|------------|:------:|
 | 29 | [**Persistent Homology H₂=0**](29-Persistent-Homology-H2/) | β₁=0 universal (185/185); H₂ bounded O(1) at N→100K; 7 families; **16/16 checks** | ✅ Proved |
 | 30 | [**R(5,5) ≥ 43 via GF(p) Seeding**](30-R55-GFp-Proof/) | Zero-violation K₄₂; GF(43) 138× better than Paley; 4-basin structure; **14/14 checks** | ✅ Proved |
+| 31 | [**Chromosome Transient Dynamics**](31-Chromosome-Transient-Dynamics/) | τ² predicts cancer across **10 independent measures** (r=0.735, p=0.006); D-score druggability; aging/neurodegeneration extensions; **7/12 predictions validated** | ✅ Validated |
 
 **Tier 1 — Mathematical Theorems** (proved, no physics input):
 
