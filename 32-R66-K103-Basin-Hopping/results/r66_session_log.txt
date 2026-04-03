@@ -1,0 +1,86 @@
+R(6,6) K₁₀₃ Session Log — 2026-04-02
+═══════════════════════════════════════════════════════════════
+
+STARTING CONDITION:
+  Previous best: 38,956 violations (proxy_guided_descent)
+  Computer froze twice from build_clique_array(103,6) = 22+ GB RAM
+  Two breakthroughs: Paley(101) extended = 4,350, Hot-node K₁₀₂ = 36,366
+
+ROOT CAUSE FIX:
+  Replaced build_clique_array with streaming exact_delta_flip
+  Peak RAM: <5 MB (down from 22+ GB)
+
+DESCENT TRAJECTORY:
+  ┌──────┬────────────┬────────┬─────────────────────────────────────────┐
+  │ Step │ Violations │  Delta │ Method                                  │
+  ├──────┼────────────┼────────┼─────────────────────────────────────────┤
+  │    0 │      4,350 │      — │ Paley(101) extended seed                │
+  │    1 │      3,761 │   -589 │ Phase A: hot-vertex exact descent       │
+  │    2 │      3,152 │   -609 │ Phase B: full 5,253-edge exact greedy   │
+  │    3 │      3,122 │    -30 │ Phase D: 2-flip escape (top-50 edges)   │
+  │    4 │      3,059 │    -63 │ Endgame: 203-var 2-flip (delta=-28)     │
+  │    5 │      3,055 │     -4 │ Endgame: 203-var 2-flip (delta=-4)      │
+  │    6 │      3,051 │     -4 │ Endgame: 203-var 2-flip (delta=-1)      │
+  │    7 │      3,027 │    -24 │ Endgame: 203-var 2-flip (delta=-5)      │
+  │    8 │      2,969 │    -58 │ Endgame: 3-flip perturbation escape     │
+  │    9 │      2,959 │    -10 │ Endgame: 2-flip from new basin          │
+  │   10 │      2,928 │    -31 │ Blitz s=137 r15 (kick=4, 27 flips)     │
+  │   11 │      2,924 │     -4 │ Blitz s=137 r16 (kick=3, 13 flips)     │
+  │   12 │      2,906 │    -18 │ Blitz s=137 r17 (kick=3, 9 flips)      │
+  │   13 │      2,904 │     -2 │ Blitz2 s=137 r9 (kick=4, 11 flips)     │
+  │   14 │      2,890 │    -14 │ Blitz2 s=137 r13 (kick=5, 14 flips)    │
+  │   15 │      2,890 │      0 │ Blitz3 s=137 100r (no improvement)      │
+  │   16 │      2,890 │      0 │ Blitz4 10 seeds × 6min (FLOOR)         │
+  └──────┴────────────┴────────┴─────────────────────────────────────────┘
+
+  Total reduction: 4,350 → 2,890 = 33.6%
+
+  FLOOR CONFIRMED: 2,890 is stable across:
+  - Exhaustive 1-flip (203 edges): 0 improving
+  - Exhaustive 2-flip (20,503 pairs): 0 improving
+  - 10 seeds × ~50 rounds of 3-11 flip perturbation: 0 improving
+  - Total: ~1,000+ perturbation attempts, zero escapes
+
+  K₁₀₄ EXTENSION RESULTS (2026-04-03):
+  Paley(103) raw: 154,159 → 18,416 (3,283 flips). Worse than P(101)+2.
+  Best K₁₀₃ (2,890) extended to K₁₀₄: 6,673 → 4,550 → 4,424 (blitz)
+  K₁₀₄ checkpoint: results/r66_best_K104.json (4,424 violations)
+
+  NEXT STEPS:
+  - More K₁₀₄ blitz rounds (only 5 improvements so far, still falling)
+  - K₁₀₄ endgame: 203-var exact 2-flip on extension edges
+  - Cross-basin crossover between Paley(101)+2 and Paley(103) colorings
+
+KEY STRUCTURAL DISCOVERIES:
+  1. Paley(101) core (vertices 0-100) has ZERO K₆ violations
+  2. ALL violations involve extension vertices 101 and/or 102
+  3. Problem reduces to 203 binary variables (edges to v101/v102)
+  4. V₄ (Klein four-group) symmetry detected (Ω=4, 4 sectors)
+  5. Landscape: GLASSY (15 basins, 6.7% convergence)
+  6. 84,349 monochromatic K₅ constrain K₁₀₄ extension
+
+ANALYSIS RESULTS:
+  Spectral gap: 2,775,850
+  Top eigenvalue: -3,810,730 (7-fold degeneracy at -1,034,880)
+  Composition ladder: Z₂ (N_q=2626) → V₄ (N_q=1313)
+  K₁₀₁ double-deletion: 1,221 violations (removed v102+v14)
+
+SCRIPTS CREATED:
+  examples/r66_surgical.rs    — Phases A-D, streaming exact delta
+  examples/r66_full_analysis.rs — Spectral/Omega/Composition/Topology
+  examples/r66_v4_attack.rs   — V₄ sector solve + K₁₀₁ + adjacency
+  examples/r66_endgame.rs     — 203-variable exact optimization
+  examples/r66_blitz.rs       — Multi-seed perturbation campaign
+
+OUTPUT FILES:
+  results/r66_best_K103.json       — Best coloring checkpoint (2,890 viol)
+  results/r66_adjacency_K103.json  — Full 103×103 adjacency matrix
+  results/r66_full_analysis.txt    — Comprehensive analysis report
+  results/r66_v4_attack.txt        — V₄ decomposition results
+  results/r66_endgame.txt          — Endgame optimization log
+  results/r66_session_log.txt      — This file
+
+RESOURCE PROFILE:
+  Peak RAM: 4 MB (surgical/endgame/blitz), 550 MB (full analysis)
+  Zero freezes (down from 2 hard resets)
+  Total compute: ~4 hours across all runs

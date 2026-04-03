@@ -1,0 +1,117 @@
+R(6,6) K₁₀₃ — Full Reproducibility Chain
+═══════════════════════════════════════════════════════════════
+
+Every step from algebraic seed to current record is fully deterministic
+and reproducible from the engine's public API.
+
+STEP 0: ALGEBRAIC SEED — Paley(101) Extended
+─────────────────────────────────────────────
+  Construction:
+    1. Compute Paley graph on GF(101):
+       paley_coloring(101, 101)
+       Edge (i,j) = +1 if (j-i) is a quadratic residue mod 101, else -1
+    2. Embed into K₁₀₃: vertices 0-100 retain Paley edges
+    3. Extension edges (incident to v101, v102): random assignment
+       RNG: Xoshiro256StarStar, seed=42
+       For each unassigned edge: if rng.random_range(0..2) == 0 then +1 else -1
+
+  Code: gen_paley101_extended(42) in r66_surgical.rs:35-57
+  Result: 4,350 exact K₆ violations
+  Verification: count_monochromatic_cliques(103, 6, &coloring) == 4350
+
+STEP 1-2: EXACT GREEDY DESCENT (r66_surgical.rs)
+─────────────────────────────────────────────────
+  Algorithm: For each edge (u,v) in K₁₀₃, compute exact delta via
+    exact_delta_flip_n(spins, u, v, 103)
+    which enumerates all C(101,4) = 4,421,275 cliques containing (u,v).
+    If delta < 0, flip the edge. Repeat until no improving flip.
+
+  Phase A: Scan edges incident to top-8 hottest vertices (788 edges)
+    vertex_heat(coloring, 1_000_000) with RNG seed 12345
+    4,350 → 3,761 (29 flips in round 0)
+
+  Phase B: Full scan of all 5,253 edges, 3 passes
+    3,761 → 3,222 → 3,163 → 3,152 (converged, 0 flips)
+
+  Code: r66_surgical.rs phases A and B
+  Deterministic: yes (exact delta, deterministic scan order u=0..N, v=u+1..N)
+
+STEP 3: 2-FLIP ESCAPE (r66_surgical.rs Phase D)
+────────────────────────────────────────────────
+  Algorithm: Enumerate all violations (streaming), compute per-edge
+    violation count, take top-50 edges, evaluate all C(50,2)=1225 pairs.
+    Best pair: delta(e1) + delta_after_e1(e2).
+
+  3,152 → 3,149 (2-flip: edges (29,102)+(26,102), delta=-3)
+  Re-descent: 3,149 → 3,122 (via r66_surgical Phase D, RNG seed 137)
+
+  Note: The 3,065 minimum was lost when the perturbation descent
+    overwrote the checkpoint (bug fixed in later version).
+    Recoverable best from checkpoint: 3,122.
+
+STEP 4-7: ENDGAME 203-VARIABLE 2-FLIP LADDER (r66_endgame.rs)
+─────────────────────────────────────────────────────────────
+  Key insight: ZERO violations among Paley(101) core edges.
+    All violations involve v101 or v102.
+    Problem reduces to 203 extension edge variables.
+
+  extension_edges(): edges incident to v101 (102 edges) + v102 (101 edges)
+    + edge (101,102) = 203 unique edges after dedup.
+
+  Exhaustive 2-flip scan: all C(203,2) = 20,503 pairs evaluated.
+  After each improving 2-flip, greedy 1-flip re-descent on 203 edges.
+
+  Step 4: 3,122 → 3,059 (2-flip (2,102)+(70,102) delta=-28, +6 re-descent)
+  Step 5: 3,059 → 3,055 (2-flip (7,102)+(71,102) delta=-4)
+  Step 6: 3,055 → 3,051 (2-flip (11,101)+(97,101) delta=-1, +1 re-descent)
+  Step 7: 3,051 → 3,027 (2-flip (41,101)+(55,101) delta=-5, +4 re-descent)
+
+  All deterministic (exhaustive scan, deterministic delta computation).
+
+STEP 8: 3-FLIP ESCAPE (r66_endgame.rs Phase 3)
+───────────────────────────────────────────────
+  2-flip exhausted at 3,027 (all 20,503 pairs: best delta=0).
+  Phase 3: random 3-5 flip perturbation + greedy descent on 203 ext edges.
+  RNG: Xoshiro256StarStar seed=42, round 1.
+  3,027 → 2,969 (crossed sub-3,000)
+
+STEP 9: 2-FLIP FROM NEW BASIN (r66_endgame.rs)
+───────────────────────────────────────────────
+  Re-ran endgame from 2,969. New 2-flip found in the 3-flip basin:
+  (65,102)+(71,102) delta=-4, +2 re-descent
+  2,969 → 2,959
+
+STEP 10-14: BLITZ CAMPAIGN (r66_blitz.rs)
+─────────────────────────────────────────
+  Multi-seed perturbation: 10 seeds × 100 rounds, 3-8 flip kicks.
+  Seeds: [137, 271, 577, 1009, 1777, 2969, 4201, 6553, 8191, 10007]
+
+  Blitz 1 (from 2,959, seed 137):
+    R15: 2,959 → 2,928 (kick=4, 27 descent flips)
+    R16: 2,928 → 2,924 (kick=3, 13 descent flips)
+    R17: 2,924 → 2,906 (kick=3, 9 descent flips)
+
+  Blitz 2 (from 2,906, seed 137):
+    R9:  2,906 → 2,904 (kick=4, 11 descent flips)
+    R13: 2,904 → 2,890 (kick=5, 14 descent flips)
+
+  Blitz 3 (from 2,890): running...
+
+  Note: seed 137 with Xoshiro256StarStar is deterministic but the
+  round number depends on which improvements were found earlier.
+  Full reproducibility requires replaying from the checkpoint at each step.
+
+CHECKPOINT FILES:
+  results/r66_checkpoint_2890.json — backup of 2,890-violation coloring
+  results/r66_best_K103.json — live checkpoint (current best)
+  results/r66_adjacency_K103.json — 103×103 adjacency matrix (at 3,122)
+
+VERIFICATION COMMAND:
+  The coloring in any checkpoint can be verified with:
+    count_monochromatic_cliques(103, 6, &coloring)
+  which streams all C(103,6) = 198,062,796 six-cliques in ~30s, O(6) memory.
+
+CORE INVARIANT:
+  At every step, count_monochromatic_cliques(101, 6, &core_coloring) == 0
+  where core_coloring = edges among vertices 0-100 only.
+  The Paley(101) quadratic residue graph is K₆-free (0 violations).

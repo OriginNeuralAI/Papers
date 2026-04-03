@@ -1,0 +1,131 @@
+╔═══════════════════════════════════════════════════════════════╗
+║  R(6,6) K103 Full Analysis — Comprehensive Results          ║
+╚═══════════════════════════════════════════════════════════════╝
+
+════════════════════════════════════════════════════════════════
+  SECTION 1: Independent Coloring Regeneration
+════════════════════════════════════════════════════════════════
+
+  Paley(101) extended to K103:
+    Exact violations: 4350
+    Color balance: 2622 red / 2631 blue (49.9%/50.1%)
+    Time: 41.1s
+
+  Hot-node K102 (removed vertex 2):
+    Exact violations: 155072
+    Color balance: 2886 red / 2367 blue (54.9%/45.1%)
+    Time: 41.0s
+
+  Checkpoint (surgical_D_perturb_r1): 3122 violations (verified: 3122)
+
+  Hamming distances:
+    Paley <-> Best:    71 (1.4%)
+    HotNode <-> Best:  2553 (48.6%)
+    Paley <-> HotNode: 2564 (48.8%)
+
+════════════════════════════════════════════════════════════════
+  SECTION 2: Per-Vertex Violation Heat Map (best coloring)
+════════════════════════════════════════════════════════════════
+
+  Top-20 hottest vertices:
+     1. vertex 102: heat = 6
+     2. vertex  14: heat = 2
+     3. vertex  50: heat = 2
+     4. vertex  63: heat = 2
+     5. vertex   5: heat = 1
+     6. vertex   6: heat = 1
+     7. vertex  10: heat = 1
+     8. vertex  19: heat = 1
+     9. vertex  27: heat = 1
+    10. vertex  33: heat = 1
+    11. vertex  46: heat = 1
+    12. vertex  49: heat = 1
+    13. vertex  51: heat = 1
+    14. vertex  53: heat = 1
+    15. vertex  54: heat = 1
+    16. vertex  64: heat = 1
+    17. vertex  70: heat = 1
+    18. vertex  71: heat = 1
+    19. vertex  75: heat = 1
+    20. vertex  76: heat = 1
+
+  Coldest 5 vertices:
+    vertex  95: heat = 0
+    vertex  97: heat = 0
+    vertex  99: heat = 0
+    vertex 100: heat = 0
+    vertex 101: heat = 0
+
+════════════════════════════════════════════════════════════════
+  SECTION 3: Zero-Core Extensibility Certificate
+════════════════════════════════════════════════════════════════
+
+  Counting monochromatic K5 in best coloring (K6 constraints)...
+  Monochromatic K5 count: 84349 (these generate extension constraints)
+  Each K5 constrains edges from new vertex -> not all same color
+  Time: 2.4s
+
+  84349 K5 constraints on K104 extension.
+  Full DPLL check skipped (too expensive for K6 constraints).
+  For zero-core certificate, use R(5,5)-style analysis on smaller K.
+
+  Extension difficulty: 84349 K5 constraints / 103 edge variables
+  Constraint density: 818.9 constraints per edge variable
+
+════════════════════════════════════════════════════════════════
+  SECTION 4: Ising Model Analysis (building ~220 MB matrix)
+════════════════════════════════════════════════════════════════
+
+  Building ramsey_to_ising(103, 6) — streaming 198M cliques...
+  Built: N=5253 spins in 709.5s
+
+  Running SpectralAnalyzer...
+  Spectral:
+    Gap: 2775850.000002
+    Rigidity: 0.000000
+    Variance: 761021552840.795288
+    delta3_dev: 3261977891758.413574
+    sigma2_dev: 1630988945878.706787
+    Top eigenvalues: [-3810730.00, -1034880.00, -1034880.00, -1034880.00, -1034880.00, -1034880.00, -1034880.00, -1034880.00]
+    Time: 7.5s
+
+  Running OmegaScanner...
+  Omega:
+    Detected: 4
+    Has structure: true
+    Sectors: 4
+    Sector sizes: [1313, 1314, 1313, 1313]
+    Symmetry order: 9
+    Time: 7.5s
+
+  Running CompositionRouter...
+  Composition Ladder (S4 series):
+    Z2 | order=2 | barrier=125.0000 | N_q=2626
+    V4 | order=4 | barrier=125.0000 | N_q=1313
+    A4 | order=12 | barrier=500.0000 | N_q=0
+    S4 | order=24 | barrier=3000.0000 | N_q=0
+    Time: 7.5s
+
+  Running TopologyProbe (15 probes)...
+  Topology:
+    Class: Glassy
+    Basins: 15
+    Basin energies: [-55715028.60, -55715028.60, -55673202.20, -55673202.20, -55673202.20]
+    Convergence: 0.0667
+    Time: 0.4s
+
+════════════════════════════════════════════════════════════════
+  SECTION 5: Ising Energies
+════════════════════════════════════════════════════════════════
+
+  Paley(101) ext:  E = -54321821.4001  (4350 violations)
+  Hot-node K102:   E = 61873211.4000  (155072 violations)
+  Best checkpoint: E = -54919033.4001  (3122 violations)
+
+════════════════════════════════════════════════════════════════
+  FINAL SUMMARY
+════════════════════════════════════════════════════════════════
+
+  Best: 3122 violations | K5 constraints: 84349 | Glassy (15 basins)
+  Spectral gap: 2775850.000002 | Omega: 4 | Total: 858s
+
