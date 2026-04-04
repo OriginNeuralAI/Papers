@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414460.svg)](https://doi.org/10.5281/zenodo.19414460)
+
 # Retrocausality and Non-Hermitian Quantum Mechanics in the U₂₄ Framework
 **Paper II of the Post-Millennium Programme | 18 pages | 33/33 checks**
 

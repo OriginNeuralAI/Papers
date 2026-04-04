@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414450.svg)](https://doi.org/10.5281/zenodo.19414450)
+
 # Moonshine Corrections to Arithmetic Functions
 **An Empirical Test**
 

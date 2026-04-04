@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414456.svg)](https://doi.org/10.5281/zenodo.19414456)
+
 # The Arrow of Time, Entanglement Structure, and the Measurement Problem
 
 **Paper I of the Post-Millennium Programme | 34 pages | 74/74 checks**

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414435.svg)](https://doi.org/10.5281/zenodo.19414435)
+
 # Paper 14 — Falsification of R(8,8) > 293
 
 **U24 Programme** | Bryan Daugherty, Gregory Ward, Shawn Ryan | March 2026

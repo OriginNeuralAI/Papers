@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414421.svg)](https://doi.org/10.5281/zenodo.19414421)
+
 # The Birch and Swinnerton-Dyer Conjecture via the Daugherty Spectral Operator
 **A Twisted Hilbert-Polya Operator for Elliptic Curve L-Functions**
 

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414479.svg)](https://doi.org/10.5281/zenodo.19414479)
+
 # U24 Paper 29: Persistent Homology of Optimization Landscapes
 
 **beta_1 = 0 Universality and Bounded H_2**

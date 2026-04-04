@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414394.svg)](https://doi.org/10.5281/zenodo.19414394)
+
 # Computing Pi via Ising Model Ground States
 **Three Novel Methods Using Combinatorial Optimization**
 

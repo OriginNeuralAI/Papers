@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414454.svg)](https://doi.org/10.5281/zenodo.19414454)
+
 # The Goldilocks Threshold
 **Quantitative Limits of Evolutionary Optimization in Quantum Energy Transport**
 

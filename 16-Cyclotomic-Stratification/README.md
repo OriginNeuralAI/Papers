@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414442.svg)](https://doi.org/10.5281/zenodo.19414442)
+
 # Cyclotomic Stratification of Diagonal Curves
 **Hitting Sets for CM Discriminants and Coupling Constants of Fermat Curves**
 

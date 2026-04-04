@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414446.svg)](https://doi.org/10.5281/zenodo.19414446)
+
 # A Spectral Diagnostic Hierarchy for Arithmetic Operators
 **Conformal Dimensions, GUE Statistics, and Moonshine Peaks**
 

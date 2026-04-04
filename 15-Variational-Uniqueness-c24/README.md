@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414440.svg)](https://doi.org/10.5281/zenodo.19414440)
+
 # Paper 15 — The Daugherty Uniqueness Theorem: Five Constraints Force c = 24
 
 **U24 Programme** | Bryan Daugherty, Gregory Ward, Shawn Ryan | March 2026

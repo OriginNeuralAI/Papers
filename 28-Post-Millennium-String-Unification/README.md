@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414474.svg)](https://doi.org/10.5281/zenodo.19414474)
+
 # String-Theoretic Unification of the U₂₄ Programme
 
 **Paper VI of the Post-Millennium Programme | 14 pages | 47/47 checks**

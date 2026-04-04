@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414483.svg)](https://doi.org/10.5281/zenodo.19414483)
+
 # Paper 30 — R(5,5) >= 43: Computational Proof via GF(p) Polynomial Seeding and Multi-Track Optimization
 
 **U24 Programme** | Bryan Daugherty, Gregory Ward, Shawn Ryan | March 2026

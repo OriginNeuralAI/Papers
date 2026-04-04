@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414417.svg)](https://doi.org/10.5281/zenodo.19414417)
+
 # Yang-Mills Existence and Mass Gap via the Spectral Operator Framework
 **The Killing Form Identity Tr(J_SM^SU(3)) = 24 = Omega and the Spectral Origin of Confinement**
 

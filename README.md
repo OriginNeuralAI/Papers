@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/1%2F%CE%B1-9%20sig%20figs-red?style=for-the-badge" alt="Alpha"/>
   <img src="https://img.shields.io/badge/Checks-500+-brightgreen?style=for-the-badge" alt="Checks"/>
   <img src="https://img.shields.io/badge/Falsified-0-purple?style=for-the-badge" alt="Falsified"/>
+  <img src="https://img.shields.io/badge/Zenodo-32_DOIs-blue?style=for-the-badge" alt="Zenodo"/>
 </p>
 
 # The Daugherty-Ward-Ryan Research Papers
@@ -15,6 +16,8 @@
 **Affiliation:** SmartLedger Solutions / Origin Neural AI
 **Date:** January — March 2026
 **Engine:** [Isomorphic Engine v0.15.0](https://github.com/OriginNeuralAI/DSC-3) — GPU-accelerated, **3.87 billion spins/sec** on RTX 5070 Ti
+
+> **All papers have permanent DOIs on Zenodo.** See [ZENODO.md](ZENODO.md) for the complete registry.
 
 > **New here?** Start with the [essays](essays/) for the narrative arc (45–60 min), then use this README as a technical roadmap into any paper.
 

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414472.svg)](https://doi.org/10.5281/zenodo.19414472)
+
 # The Rational Universe
 
 **Paper V of the Post-Millennium Programme | 8 pages | Phase II+III Discoveries**

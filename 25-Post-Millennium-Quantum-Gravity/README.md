@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414466.svg)](https://doi.org/10.5281/zenodo.19414466)
+
 # Quantum Gravity from the Monster Cascade and the Completeness of U₂₄
 
 **Paper III of the Post-Millennium Programme | 15 pages | 56/56 checks**

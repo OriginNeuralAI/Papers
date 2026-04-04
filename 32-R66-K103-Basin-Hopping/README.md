@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414487.svg)](https://doi.org/10.5281/zenodo.19414487)
+
 # Paper 32: Toward R(6,6) >= 104 — Multi-Flip Basin-Hopping on Extended Paley Graphs
 
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan  

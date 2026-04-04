@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414409.svg)](https://doi.org/10.5281/zenodo.19414409)
+
 # A Spectral Operator for the Riemann Hypothesis
 **Construction, Self-Adjointness, and Computational Verification at N = 5,000,000 Zeta Zeros**
 

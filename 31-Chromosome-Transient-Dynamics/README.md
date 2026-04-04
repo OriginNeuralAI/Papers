@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414485.svg)](https://doi.org/10.5281/zenodo.19414485)
+
 # Paper 31 — Transient Dynamics of a Z₂₃ Endomorphism Predict Cancer Biology Across Ten Independent Measures
 
 **The U₂₄ Programme** | Bryan Daugherty, Gregory Ward, Shawn Ryan | April 2026

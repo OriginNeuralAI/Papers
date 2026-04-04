@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414444.svg)](https://doi.org/10.5281/zenodo.19414444)
+
 # Group-Theoretic Structure of Optimization Stagnation
 **S4 Symmetry, Kramers Barriers, and the Universality Constant Omega = 24**
 
