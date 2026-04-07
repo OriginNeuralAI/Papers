@@ -36,6 +36,7 @@ All papers in this repository have been published to Zenodo with permanent DOIs.
 | 30 | R(5,5) GF(p) Proof | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414483.svg)](https://doi.org/10.5281/zenodo.19414483) | [19414483](https://zenodo.org/records/19414483) |
 | 31 | Chromosome Dynamics | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414485.svg)](https://doi.org/10.5281/zenodo.19414485) | [19414485](https://zenodo.org/records/19414485) |
 | 32 | R(6,6) K103 Basin-Hopping | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19414487.svg)](https://doi.org/10.5281/zenodo.19414487) | [19414487](https://zenodo.org/records/19414487) |
+| 33 | The Universality Lock (DSC-3) | *Zenodo deposit pending* | — |
 
 ## DSC-3 Benchmark Paper
 

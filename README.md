@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Papers-31-blue?style=for-the-badge" alt="Papers"/>
+  <img src="https://img.shields.io/badge/Papers-33-blue?style=for-the-badge" alt="Papers"/>
   <img src="https://img.shields.io/badge/Theorems-8-brightgreen?style=for-the-badge" alt="Theorems"/>
   <img src="https://img.shields.io/badge/Predictions-3%20derived-gold?style=for-the-badge" alt="Predictions"/>
   <img src="https://img.shields.io/badge/1%2F%CE%B1-9%20sig%20figs-red?style=for-the-badge" alt="Alpha"/>
   <img src="https://img.shields.io/badge/Checks-500+-brightgreen?style=for-the-badge" alt="Checks"/>
   <img src="https://img.shields.io/badge/Falsified-0-purple?style=for-the-badge" alt="Falsified"/>
-  <img src="https://img.shields.io/badge/Zenodo-32_DOIs-blue?style=for-the-badge" alt="Zenodo"/>
+  <img src="https://img.shields.io/badge/Zenodo-33_DOIs-blue?style=for-the-badge" alt="Zenodo"/>
 </p>
 
 # The Daugherty-Ward-Ryan Research Papers
 
-> *Thirty-one papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, **cancer genomics**, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, **ten independent biological validations**, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
+> *Thirty-three papers unifying pure mathematics, number theory, combinatorial optimization, theoretical physics, quantum biology, **cancer genomics**, and string theory through a single constant. Eight proved mathematical theorems, three uniquely determined basin-force mappings, **ten independent biological validations**, and **three structurally derived predictions** — α_s via the QCD beta function (0.095%), the Koide parameter via gravitational universality (exact), and dark energy w via S₄ group theory (proved).*
 
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan
 **Affiliation:** SmartLedger Solutions / Origin Neural AI
@@ -35,7 +35,7 @@ The basin-force mapping is post-hoc but **uniquely determined** (0/94 alternativ
 
 ## The Central Idea
 
-All thirty papers are connected by a single mathematical thread: the **universality constant**
+All thirty-three papers are connected by a single mathematical thread: the **universality constant**
 
 $$\Omega = \frac{\tau_{\text{macro}}}{\tau_{\text{micro}}} = \frac{3000}{125} = 24 = |S_4|$$
 
@@ -112,13 +112,15 @@ which appears independently across **eleven** mathematical structures:
 | 27 | [**The Rational Universe**](27-Post-Millennium-Rational-Universe/) | **1/α = 137 + 9/250 (9 sig figs)**; sin²θ_W = 6/26 (0.19%); 2-bit capacity | ✅ Discovered |
 | 28 | [**String-Theoretic Unification**](28-Post-Millennium-String-Unification/) | Ω = 24 = c(Monster VOA) = D_bos−2; partition **algebraically determined**; **47/47** | ✅ Unified |
 
-### 🔬 Topology & Combinatorics (Papers 29–30)
+### 🔬 Topology, Combinatorics & Computational Confirmation (Papers 29–33)
 
 | # | Title | Key Result | Status |
 |:---:|-------|------------|:------:|
 | 29 | [**Persistent Homology H₂=0**](29-Persistent-Homology-H2/) | β₁=0 universal (185/185); H₂ bounded O(1) at N→100K; 7 families; **16/16 checks** | ✅ Proved |
 | 30 | [**R(5,5) ≥ 43 via GF(p) Seeding**](30-R55-GFp-Proof/) | Zero-violation K₄₂; GF(43) 138× better than Paley; 4-basin structure; **14/14 checks** | ✅ Proved |
 | 31 | [**Chromosome Transient Dynamics**](31-Chromosome-Transient-Dynamics/) | τ² predicts cancer across **10 independent measures** (r=0.735, p=0.006); D-score druggability; aging/neurodegeneration extensions; **7/12 predictions validated** | ✅ Validated |
+| 32 | [**Toward R(6,6) ≥ 104**](32-R66-K103-Basin-Hopping/) | K103 coloring with 2,890 violations (99.998% K6-free); Paley(101) core contributes **zero** violations; streaming exact delta eval | 🧪 Empirical |
+| 33 | [**The Universality Lock**](33-Universality-Lock-DSC3/) | Ω=24.00±0.00 at N=5K–10K; step-budget optimality at tier-3; only Leech (deg=24) has finite-T transition; 100% NS GUE; **4 figures, 4 falsifiability criteria** | ✅ Confirmed |
 
 **Tier 1 — Mathematical Theorems** (proved, no physics input):
 
