@@ -3,7 +3,7 @@
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan  
 **Date:** April 2026  
 **Engine:** DSC-3 Isomorphic Engine v0.15.0, NVIDIA RTX 6000 Ada (48 GB VRAM)  
-**DOI:** Zenodo deposit pending
+**DOI:** [10.5281/zenodo.19453118](https://doi.org/10.5281/zenodo.19453118)
 
 ## Abstract
 
