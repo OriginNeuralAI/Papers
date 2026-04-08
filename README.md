@@ -22,6 +22,8 @@
 > **All 33 paper PDFs are SHA-256 hashed and anchored to the BSV blockchain.** See [BSV_HASHES.md](BSV_HASHES.md) for the complete hash registry and transaction IDs.
 
 > **New here?** Start with the [essays](essays/) for the narrative arc (45–60 min), then use this README as a technical roadmap into any paper.
+>
+> **Media?** See the [Press Kit](PRESS_KIT.md) for one-liners, key numbers, story angles, and team bios.
 
 ---
 
