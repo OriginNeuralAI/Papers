@@ -19,8 +19,8 @@ All 33 papers in this repository have their SHA-256 hashes permanently anchored 
 | 04 | Eleven Paths to Omega=24 | `8d938b30fdecc8aef5ec005271c1581fac59ef3bc60fe1276f082d5100bcdcf9` | [10.5281/zenodo.19414401](https://doi.org/10.5281/zenodo.19414401) |
 | 05 | The U24 Programme | `62bcd4c134e330e4545d8e56191f4980b07626df80ccf368b84fc49ce679fbb8` | [10.5281/zenodo.19414403](https://doi.org/10.5281/zenodo.19414403) |
 | 06 | Spectral Unity of Mathematics | `f85313f8cec54980781f0b1dcd2c9a76aa69542a29e77e3ba7bfebf67ef48baa` | [10.5281/zenodo.19414405](https://doi.org/10.5281/zenodo.19414405) |
-| 07 | Riemann Hypothesis — Spectral Operator | `8aa40730f408c27732ce245aaf685c8b1a8ae809c6186553a2a20cc72ea438e4` | [10.5281/zenodo.19414409](https://doi.org/10.5281/zenodo.19414409) |
-| 08 | RH Complete Proofs | `8d1565da40ad8af90a24ab23cb8b916f35321e213d48e791d6833a7f4f38d4c9` | [10.5281/zenodo.19414413](https://doi.org/10.5281/zenodo.19414413) |
+| 07 | Riemann Hypothesis — Spectral Operator **(v14.1)** | `23cd849a1fe47dd8c3be4cc5223b28d4938f54a339a0e25b4924dd9aecfa4c13` | [10.5281/zenodo.19469480](https://doi.org/10.5281/zenodo.19469480) (v14.1) |
+| 08 | RH Complete Proofs **(v1.1)** | `5bde7bf024f43de3c4515bad4df93d34b42304211ebce49c0b8c06cac9a7a77c` | [10.5281/zenodo.19469502](https://doi.org/10.5281/zenodo.19469502) (v1.1) |
 | 09 | Yang-Mills Mass Gap | `b5713e1df64456abc9c3914eddbf08d9906710d0c7f9eecb6fd1cfde1865c925` | [10.5281/zenodo.19414417](https://doi.org/10.5281/zenodo.19414417) |
 | 10 | BSD Conjecture | `21aa8703cdec4fe2a1159765bbf49a24629349f398be9b8821a90ce83497b9f3` | [10.5281/zenodo.19414421](https://doi.org/10.5281/zenodo.19414421) |
 | 11 | Hodge Conjecture | `a925e5b57b82c97516af062617d9efca7afbb8e47b4553696c468a502af16181` | [10.5281/zenodo.19414423](https://doi.org/10.5281/zenodo.19414423) |
