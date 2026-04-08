@@ -15,7 +15,7 @@
 **Authors:** Bryan Daugherty, Gregory Ward, Shawn Ryan
 **Affiliation:** SmartLedger Solutions / Origin Neural AI
 **Date:** January — March 2026
-**Engine:** [Isomorphic Engine v0.15.0](https://github.com/OriginNeuralAI/DSC-3) — GPU-accelerated, **3.87 billion spins/sec** on RTX 5070 Ti
+**Engine:** [Isomorphic Engine v0.15.0](https://github.com/OriginNeuralAI/DSC-3) — GPU-accelerated, **9.52 billion spins/sec** peak (GPU-SBM direct on RTX 6000 Ada); **3.87 billion spins/sec** (full ensemble on RTX 5070 Ti)
 
 > **All papers have permanent DOIs on Zenodo.** See [ZENODO.md](ZENODO.md) for the complete registry.
 
@@ -334,16 +334,23 @@ A novel algebraic construction proves R(5,5) ≥ 43 via GF(43) polynomial seedin
 ### GPU Throughput Scaling
 
 ```
-   Spins    │  Time (GPU)  │  Throughput
-  ──────────┼──────────────┼──────────────
-    10,000  │     28 ms    │   354M spins/s
-   100,000  │     48 ms    │  2.09B spins/s
-   500,000  │    139 ms    │  3.60B spins/s
- 1,000,000  │    259 ms    │  3.87B spins/s  ◄── ceiling
+   Spins      │  Time (GPU)  │  Throughput       │  Platform
+  ────────────┼──────────────┼───────────────────┼──────────────────
+      10,000  │     28 ms    │    354M spins/s   │  RTX 5070 Ti (ensemble)
+     100,000  │     48 ms    │   2.09B spins/s   │  RTX 5070 Ti (ensemble)
+     500,000  │    139 ms    │   3.60B spins/s   │  RTX 5070 Ti (ensemble)
+   1,000,000  │    259 ms    │   3.87B spins/s   │  RTX 5070 Ti (ensemble)
+   ────────────────────────────────────────────────────────────────────
+     100,000  │     41 ms    │   2.43B spins/s   │  RTX 6000 Ada (GPU-SBM)
+     500,000  │     66 ms    │   7.58B spins/s   │  RTX 6000 Ada (GPU-SBM)
+   1,000,000  │    105 ms    │   9.52B spins/s   │  RTX 6000 Ada (GPU-SBM) ◄── peak
+   5,000,000  │    643 ms    │   7.78B spins/s   │  RTX 6000 Ada (GPU-SBM)
+  10,000,000  │   1.56 s     │   6.41B spins/s   │  RTX 6000 Ada (GPU-SBM)
 ```
 
-> **1 million spins solved in 259 milliseconds** on a single RTX 5070 Ti.
-> CPU hit the memory wall (511 GB) at this scale — GPU broke through.
+> **1 million spins solved in 105 milliseconds** on RTX 6000 Ada GPU-SBM direct.
+> **10 million spins solved in 1.56 seconds.** Peak throughput: **9.52 billion spins/sec**.
+> Leech lattice (196,560 spins, degree 24 = Ω): **309 ms** on GPU-SBM.
 
 ### Monster Prime Amplification (Paper 19)
 
@@ -548,18 +555,23 @@ All papers are backed by the **[Isomorphic Engine (DSC-3)](https://github.com/Or
 | Domain | Scale | Result |
 |--------|:-----:|--------|
 | Riemann zeta zeros | **5,000,000** | GUE pair correlation L² = 0.026 |
-| Ising optimization | **1,000,000 spins** | GPU solve in 259ms |
+| **Secular equation zero matching** | **169 zeta zeros** | **0.23% mean error**, 100% matched via det(I−S·D(k))=0 |
+| Ising optimization (GPU-SBM) | **10,000,000 spins** | GPU solve in 1.56s; peak **9.52 Gspins/s** |
+| **Eigendecomposition (faer SIMD)** | **dim = 17,250** | 297M element matrix in 204s |
 | Ramsey numbers | **R(5,5) – R(10,10)** | Exhaustive + GPU campaigns |
 | Fermat curves | **15 degrees, p = 50,000** | 2,556 data points per degree |
 | Stagnation universality | **60 measurements** | Ω = 24.00 ± 0.00 |
-| Monster exponential sums | **15 primes, 1000 zeros** | 808× GPU amplification |
+| Monster exponential sums | **15 primes, 1000 zeros** | 808× GPU amplification; E₈ overlap 87.5% confirmed |
 | Goldilocks threshold | **50,000+ Hamiltonians** | N_c = 4.6 ± 0.3 across 8 domains |
 | Biological validation | **59 systems** | Zero exceptions (100% accuracy) |
 | P ≠ NP RSB | **n = 100,000 vars** | q_EA = 0.997, forbidden mass = 0.00% |
-| Leech lattice Ising | **196,560 spins** | GPU solve in 218ms |
+| Leech lattice Ising | **196,560 spins** | GPU-SBM solve in **309ms** (deg = 24 = Ω) |
+| **Yang-Mills GPU barrier** | **L = 4, 6, 8 (N = 12,288)** | B/L³ grows monotonically; α ≈ 3.5 |
 | Post-Millennium spectral | **34,500 × 34,500** | Dense diag on RTX 5070 Ti (410s) |
 | Born rule verification | **10⁷ samples** | Error 1.18 × 10⁻⁴ (1-step convergence) |
 | PT-exact stability | **γ = 10⁶, dim 4,600** | max\|Im(λ)\| < 10⁻⁹ |
+| **TRS breaking verification** | **23-vertex quantum graph** | ‖T−T⊤‖ = 4.006; rank(G) = 14 → GUE confirmed |
+| **Off-diagonal Weyl bound** | **N = 10² – 10⁶** | O(N⁻¹(log N)¹⁵) verified; cross-prime suppression 122:1 |
 | α_EM derivation | **23-element lookup** | 9 significant figures, zero free parameters |
 | Eigenvector clustering | **N = 100–750** | 8/9 exact at every scale |
 | Persistent homology | **N = 50–100,000** | β₁=0 universal (185/185); H₂ bounded O(1) |
